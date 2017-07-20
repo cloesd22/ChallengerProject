@@ -11,3 +11,9 @@
 	top:50%;
 
 }
+
+.panelTheme {
+	background-color: #222;
+	 color:#999;
+	 border-radius: 5px;
+}

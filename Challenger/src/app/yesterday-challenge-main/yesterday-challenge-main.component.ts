@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class YesterdayChallengeMainComponent implements OnInit {
 
+
+backgroundImage:string = "https://newevolutiondesigns.com/images/freebies/cool-wallpaper-19.jpg";
+
   constructor() { }
 
   ngOnInit() {
