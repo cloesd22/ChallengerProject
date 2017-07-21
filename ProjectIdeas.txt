@@ -1,11 +1,8 @@
 ==Project Ideas==
 
-Web app that generates a new 'challenge' out of submitted challenges to present to users daily (or on request).
-Logins via google for ez login.
+Web app that allows users to submit a daily 'challenge' or problem that needs to be sovled. Problems can be social problems, political, software, mathematical, philosophical or in any field.
 
-Python-Django based restful webapp that generates the daily challenge and also runs a neural network daily on submitted ideas to filter for top ones based on common keywords. ie; Of all submitted articles in the last 6 months filter for top keywords.
-For all submitted ideas today, apply nueral network filtering for those same keywords to present ideas, then randomise.
+Project is written primarily in NodeJS/Angular.
 
-Laravel PHP for the front end, website part of it.
 
 ->Test modification 1
