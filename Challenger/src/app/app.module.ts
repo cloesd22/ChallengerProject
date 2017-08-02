@@ -10,6 +10,7 @@ import {Routes,RouterModule} from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ArchiveComponent } from './archive/archive.component';
 import { ChallengeResponseComponent } from './challenge-response/challenge-response.component';
+import { AddChallengeComponent } from './add-challenge/add-challenge.component';
 
 
 const pathMap: Routes=
@@ -19,6 +20,7 @@ const pathMap: Routes=
 	{path:'today', component:TodayChallengeMainComponent},
 	{path:'tommorow', component:TommorowChallengeMainComponent},
 	{path:'Archive', component:ArchiveComponent},
+  {path:'newChallenge', component:AddChallengeComponent},
 	{path:'not_found', component:HomeComponent},
 	{path:'**', redirectTo:'/not_found'}
 ];
@@ -32,6 +34,7 @@ const pathMap: Routes=
     HomeComponent,
     ArchiveComponent,
     ChallengeResponseComponent,
+    AddChallengeComponent,
 
   ],
   imports: [
