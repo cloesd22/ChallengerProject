@@ -1,0 +1,963 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"btn-",
+				"btn-primary \tBootstrap 4 Class"
+			],
+			[
+				"btn-su",
+				"btn-success \tBootstrap 4 Class"
+			],
+			[
+				"btn-inf",
+				"btn-info \tBootstrap 4 Class"
+			],
+			[
+				"ch",
+				"challengeUpvote\tproperty"
+			],
+			[
+				"chal",
+				"challengeImgUrl\tproperty"
+			],
+			[
+				"challenge",
+				"challengeText\tproperty"
+			],
+			[
+				"chall",
+				"challengeHeading\tproperty"
+			],
+			[
+				"backgr",
+				"background-image"
+			],
+			[
+				"quer",
+				"queryParamsHandling\tproperty"
+			],
+			[
+				"rou",
+				"actRoute\tproperty"
+			],
+			[
+				"Rout",
+				"Router\talias"
+			],
+			[
+				"server",
+				"serversService\tproperty"
+			],
+			[
+				"btn",
+				"btn-success \tBootstrap 4 Class"
+			],
+			[
+				"rout",
+				"Routes\talias"
+			],
+			[
+				"ingre",
+				"ingredients\tproperty"
+			],
+			[
+				"get",
+				"getIngredients\tmethod"
+			],
+			[
+				"sus",
+				"subscribe\tmethod"
+			],
+			[
+				"Host",
+				"HostBinding\talias"
+			],
+			[
+				"EVe",
+				"EventEmitter\talias"
+			],
+			[
+				"Element",
+				"ElementRef\talias"
+			],
+			[
+				"Event",
+				"EventEmitter\talias"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"conte",
+				"align-content"
+			],
+			[
+				"HTTP",
+				"HTMLOutputElement\tinterface"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"border-c",
+				"border-color"
+			],
+			[
+				"d",
+				"double"
+			],
+			[
+				"background-",
+				"background-color"
+			],
+			[
+				"btn-s",
+				"btn-sm \tBootstrap 4 Class"
+			],
+			[
+				"btn-dan",
+				"btn-outline-danger \tBootstrap 4 Class"
+			],
+			[
+				"alig",
+				"text-align"
+			],
+			[
+				"text",
+				"text-center \tBootstrap 4 Class"
+			],
+			[
+				"align-items",
+				"align-items-center \tBootstrap 4 Class"
+			],
+			[
+				"for",
+				"fori\tfor (…) {…}"
+			],
+			[
+				"di",
+				"div\tTag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Challenger/src/app/tommorow-challenge-main/tommorow-challenge-main.component.html",
+			"settings":
+			{
+				"buffer_size": 1355,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Challenger/src/app/add-challenge/add-challenge.component.html",
+			"settings":
+			{
+				"buffer_size": 746,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Challenger/src/app/challenge-response/challenge-response.component.html",
+			"settings":
+			{
+				"buffer_size": 1438,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/E/Angular/RecipeBook/RecipeBook/src/app/header/header.component.html",
+			"settings":
+			{
+				"buffer_size": 894,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Challenger/src/app/tommorow-challenge-main/tommorow-challenge-main.component.ts",
+			"settings":
+			{
+				"buffer_size": 388,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Challenger/src/app/app.module.ts",
+			"settings":
+			{
+				"buffer_size": 1785,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Challenger/src/app/services/challenge.service.ts",
+			"settings":
+			{
+				"buffer_size": 351,
+				"encoding": "UTF-8",
+				"line_ending": "Windows",
+				"name": "challenge.service.ts"
+			}
+		},
+		{
+			"file": "Challenger/src/app/yesterday-challenge-main/yesterday-challenge-main.component.html",
+			"settings":
+			{
+				"buffer_size": 347,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Challenger/src/app/today-challenge-main/today-challenge-main.component.ts",
+			"settings":
+			{
+				"buffer_size": 409,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Challenger/src/app/models/challenge.model.ts",
+			"settings":
+			{
+				"buffer_size": 865,
+				"encoding": "UTF-8",
+				"line_ending": "Windows",
+				"name": "challenge.model.ts"
+			}
+		},
+		{
+			"file": "Challenger/src/app/yesterday-challenge-main/yesterday-challenge-main.component.ts",
+			"settings":
+			{
+				"buffer_size": 439,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Challenger/src/app/yesterday-challenge-main/yesterday-challenge-main.component.css",
+			"settings":
+			{
+				"buffer_size": 46,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Challenger/src/styles.css",
+			"settings":
+			{
+				"buffer_size": 1143,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"ls",
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/Challenger",
+		"/E/Challenger/Challenger",
+		"/E/Challenger/Challenger/src",
+		"/E/Challenger/Challenger/src/app",
+		"/E/Challenger/Challenger/src/app/add-challenge",
+		"/E/Challenger/Challenger/src/app/challenge-response",
+		"/E/Challenger/Challenger/src/app/home",
+		"/E/Challenger/Challenger/src/app/models",
+		"/E/Challenger/Challenger/src/app/services",
+		"/E/Challenger/Challenger/src/app/today-challenge-main",
+		"/E/Challenger/Challenger/src/app/tommorow-challenge-main",
+		"/E/Challenger/Challenger/src/app/yesterday-challenge-main"
+	],
+	"file_history":
+	[
+		"/E/Angular/RecipeBook/RecipeBook/src/app/header/header.component.ts",
+		"/E/Challenger/Challenger/src/app/tommorow-challenge-main/tommorow-challenge-main.component.css",
+		"/E/Challenger/test.html",
+		"/E/Angular/routing-start/src/app/servers/servers.service.ts",
+		"/E/Angular/routing-start/src/app/servers/servers.component.ts",
+		"/E/Angular/routing-start/src/app/servers/edit-server/edit-server.component.ts",
+		"/E/Angular/routing-start/src/app/servers/server/server.component.html",
+		"/E/Angular/routing-start/src/app/servers/servers.component.html",
+		"/E/Angular/routing-start/src/app/home/home.component.ts",
+		"/E/Angular/routing-start/src/app/home/home.component.html",
+		"/E/Angular/routing-start/src/app/app.component.html",
+		"/E/Angular/routing-start/src/app/app.component.spec.ts",
+		"/E/Angular/routing-start/src/app/users/user/user.component.html",
+		"/E/Angular/routing-start/src/app/users/users.component.html",
+		"/E/Angular/routing-start/src/app/users/user/user.component.ts",
+		"/E/Angular/routing-start/src/app/servers/edit-server/edit-server.component.html",
+		"/E/Angular/routing-start/src/app/pgnotfound/pgnotfound.component.html",
+		"/E/Angular/routing-start/src/app/servers/server/server.component.ts",
+		"/E/Angular/routing-start/src/app/app-routing.module.ts",
+		"/E/Angular/Challenger/now-ui-kit-v1.0.1/documentation/template.html",
+		"/E/Angular/routing-start/src/app/app.module.ts",
+		"/E/Angular/Challenger/.gitignore",
+		"/E/Angular/RecipeBook/RecipeBook/src/app/shoppinglist/shoppinglist.component.html",
+		"/E/Angular/RecipeBook/RecipeBook/src/app/shared/ingredient.model.ts",
+		"/E/Angular/RecipeBook/RecipeBook/src/app/recipebook/recipedetail/recipedetail.component.html",
+		"/E/Angular/RecipeBook/RecipeBook/src/app/recipebook/recipedetail/recipedetail.component.ts",
+		"/E/Angular/RecipeBook/RecipeBook/src/app/services/shoppinglist.service.ts",
+		"/E/Angular/RecipeBook/RecipeBook/src/app/services/recipe.service.ts",
+		"/E/Angular/RecipeBook/RecipeBook/src/app/recipebook/recipe.model.ts",
+		"/E/Angular/RecipeBook/RecipeBook/src/app/shoppinglist/shoppinglistedit/shoppinglistedit.component.ts",
+		"/E/Angular/RecipeBook/RecipeBook/src/app/recipebook/recipeitem/recipeitem.component.ts",
+		"/E/Angular/RecipeBook/RecipeBook/src/app/recipebook/recipebook.component.html",
+		"/E/Angular/RecipeBook/RecipeBook/src/app/app.module.ts",
+		"/E/Angular/RecipeBook/RecipeBook/src/app/shoppinglist/shoppinglist.component.ts",
+		"/E/Angular/RecipeBook/RecipeBook/src/app/recipebook/recipebook.component.ts",
+		"/E/Angular/RecipeBook/RecipeBook/src/app/shoppinglist/shoppinglistedit/shoppinglistedit.component.html",
+		"/E/Angular/RecipeBook/RecipeBook/src/app/header/header.component.html",
+		"/E/Angular/RecipeBook/RecipeBook/src/app/app.component.html",
+		"/E/Angular/RecipeBook/RecipeBook/src/app/dropdown/drop-down.directive.ts",
+		"/E/Angular/RecipeBook/RecipeBook/src/app/recipebook/recipeitem/recipeitem.component.html",
+		"/E/Angular/RecipeBook/RecipeBook/src/app/drop-down.directive.spec.ts",
+		"/E/Angular/Assignmen3/cmp-databinding-assignment-start/src/app/app.component.ts",
+		"/E/Angular/Assignmen3/cmp-databinding-assignment-start/src/app/odd/odd.component.css",
+		"/E/Angular/Assignmen3/cmp-databinding-assignment-start/src/app/even/even.component.css",
+		"/E/Angular/Assignmen3/cmp-databinding-assignment-start/src/app/app.component.html",
+		"/E/Angular/Assignmen3/cmp-databinding-assignment-start/src/app/odd/odd.component.html",
+		"/E/Angular/Assignmen3/cmp-databinding-assignment-start/src/app/even/even.component.html",
+		"/E/Angular/Assignmen3/cmp-databinding-assignment-start/src/app/game-control/game-control.component.ts",
+		"/E/Angular/Assignmen3/cmp-databinding-assignment-start/src/app/game-control/game-control.component.html",
+		"/E/Angular/Assignmen3/cmp-databinding-assignment-start/src/app/app.component.spec.ts",
+		"/E/Angular/Assignmen3/cmp-databinding-assignment-start/src/app/game-control/game-control.component.spec.ts",
+		"/E/Angular/cmp-databinding-start/src/app/server-element/server-element.component.ts",
+		"/E/Angular/cmp-databinding-start/src/app/app.component.ts",
+		"/E/Angular/cmp-databinding-start/src/app/app.component.html",
+		"/E/Angular/cmp-databinding-start/src/app/cockpit/cockpit.component.ts",
+		"/E/Angular/cmp-databinding-start/src/app/cockpit/cockpit.component.html",
+		"/E/Angular/cmp-databinding-start/src/app/app.component.spec.ts",
+		"/E/SnakeGarden/Copperhead/AnnCopperhead.py",
+		"/E/SnakeGarden/Copperhead/AnnCopperhead(rewritten).py",
+		"/E/Angular/TestingProject/TestProject/src/app/mainpanel/mainpanel.component.html",
+		"/E/Angular/TestingProject/TestProject/src/app/mainpanel/mainpanel.component.css",
+		"/E/Angular/TestingProject/TestProject/src/app/app.component.css",
+		"/E/Angular/TestingProject/TestProject/src/app/app.component.html",
+		"/E/Angular/TestingProject/TestProject/node_modules/webdriver-js-extender/node_modules/selenium-webdriver/lib/test/data/js/jquery-1.4.4.min.js",
+		"/E/Angular/TestingProject/TestProject/src/app/shared/person.model.ts",
+		"/E/Angular/TestingProject/TestProject/src/app/mainpanel/mainpanel.component.ts",
+		"/E/Angular/TestingProject/TestProject/src/app/app.module.ts",
+		"/E/Angular/TestingProject/TestProject/src/app/app.component.ts",
+		"/E/Angular/cmp-databinding-start/src/app/app.module.ts",
+		"/E/Angular/TestingProject/TestProject/src/app/mainpanel/mainpanel.component.spec.ts",
+		"/E/Angular/RecipeBook/RecipeBook/src/app/app.component.ts",
+		"/E/Angular/TestingProject/TestProject/src/app/app.component.spec.ts",
+		"/C/Users/manoj/AppData/Roaming/Sublime Text 3/Packages/TypeScript/TypeScriptReact.sublime-settings",
+		"/C/Users/manoj/AppData/Roaming/Sublime Text 3/Packages/TypeScript/TypeScript.sublime-settings"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 95.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"7px",
+			">\n",
+			";",
+			"; ",
+			" ' ",
+			"echo",
+			");\n",
+			"021a40"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Challenger/src/app/tommorow-challenge-main/tommorow-challenge-main.component.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1355,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1090,
+								1090
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Challenger/src/app/add-challenge/add-challenge.component.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 746,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								746,
+								746
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Challenger/src/app/challenge-response/challenge-response.component.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1438,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								260,
+								260
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/E/Angular/RecipeBook/RecipeBook/src/app/header/header.component.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 894,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								81,
+								81
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Challenger/src/app/tommorow-challenge-main/tommorow-challenge-main.component.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 388,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								388,
+								388
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Challenger/src/app/app.module.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1785,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1393,
+								1393
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 198.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Challenger/src/app/services/challenge.service.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 351,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								351,
+								351
+							]
+						],
+						"settings":
+						{
+							"auto_name": "challenge.service.ts",
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Challenger/src/app/yesterday-challenge-main/yesterday-challenge-main.component.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 347,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								347,
+								347
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "Challenger/src/app/today-challenge-main/today-challenge-main.component.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 409,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								103,
+								51
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "Challenger/src/app/models/challenge.model.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 865,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								670,
+								670
+							]
+						],
+						"settings":
+						{
+							"auto_name": "challenge.model.ts",
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "Challenger/src/app/yesterday-challenge-main/yesterday-challenge-main.component.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 439,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								297,
+								312
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "Challenger/src/app/yesterday-challenge-main/yesterday-challenge-main.component.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 46,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14,
+								14
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "Challenger/src/styles.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1143,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1143,
+								1143
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 478.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 126.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ChallengerProject.sublime-project",
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 389.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

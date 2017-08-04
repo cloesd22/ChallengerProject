@@ -1,0 +1,34 @@
+<div class="cart-item">
+    <div class="cart-item-info">
+      <div class="img-container">
+        <div class="row">
+        <div class="img-col col-xs-4">
+          <a>
+            <img src="'.$selectedproduct['product_image'].'" at="#">
+          </a>
+        </div>
+
+        <div class="cart-info" ">
+
+          <div class="item-name col-xs-4">
+            <span id="#">
+              <a href="item.php?productidsend='.$selectedproduct['product_id'].'">'.$selectedproduct['product_name'].'</a>
+            </span>
+          </div>
+
+          <div class="item-price col-xs-4" >
+            <span id="#" stlye="padding: 30px">
+             $'.$selectedproduct['product_price'].'
+            </span>
+          </div>
+
+        </div>
+
+        </div>
+      </div>
+
+      <div class="cart-remove">
+        <a class="actionLink" href="removecartitem.php?removepoint='.$x.'"> Remove </a>
+      </div>
+    </div>
+</div>

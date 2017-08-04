@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { ArchiveComponent } from './archive/archive.component';
 import { ChallengeResponseComponent } from './challenge-response/challenge-response.component';
 import { AddChallengeComponent } from './add-challenge/add-challenge.component';
+import {mouseoverHighlight} from './challenge-response/directiveChallenge/mouseoverReaction.directive';
 
 
 const pathMap: Routes=
@@ -35,6 +36,8 @@ const pathMap: Routes=
     ArchiveComponent,
     ChallengeResponseComponent,
     AddChallengeComponent,
+    mouseoverHighlight
+
 
   ],
   imports: [
