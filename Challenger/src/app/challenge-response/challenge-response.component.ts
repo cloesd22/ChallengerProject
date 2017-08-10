@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChallengeResponseComponent implements OnInit {
 
+	challengeid:number=1;
+	
   constructor() { }
 
   ngOnInit() {

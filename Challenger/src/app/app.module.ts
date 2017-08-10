@@ -12,6 +12,7 @@ import { ArchiveComponent } from './archive/archive.component';
 import { ChallengeResponseComponent } from './challenge-response/challenge-response.component';
 import { AddChallengeComponent } from './add-challenge/add-challenge.component';
 import {mouseoverHighlight} from './challenge-response/directiveChallenge/mouseoverReaction.directive';
+import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
 
 
 const pathMap: Routes=
@@ -19,10 +20,12 @@ const pathMap: Routes=
 	{path:'', component:HomeComponent},
 	{path:'yesterday', component:YesterdayChallengeMainComponent},
 	{path:'today', component:TodayChallengeMainComponent},
+  {path:'home', component:HomeComponent},
 	{path:'tommorow', component:TommorowChallengeMainComponent},
 	{path:'Archive', component:ArchiveComponent},
   {path:'newChallenge', component:AddChallengeComponent},
-	{path:'not_found', component:HomeComponent},
+  {path:'today/:id/edit', component:AddChallengeComponent},
+	{path:'not_found', component:PageNotFoundComponentComponent},
 	{path:'**', redirectTo:'/not_found'}
 ];
 
@@ -36,7 +39,9 @@ const pathMap: Routes=
     ArchiveComponent,
     ChallengeResponseComponent,
     AddChallengeComponent,
-    mouseoverHighlight
+    mouseoverHighlight,
+    PageNotFoundComponentComponent
+ 
 
 
   ],
