@@ -13,6 +13,8 @@ import { ChallengeResponseComponent } from './challenge-response/challenge-respo
 import { AddChallengeComponent } from './add-challenge/add-challenge.component';
 import {mouseoverHighlight} from './challenge-response/directiveChallenge/mouseoverReaction.directive';
 import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
+import { ReportPanelComponent } from './report-panel/report-panel.component';
+import {challengeListing} from './models/challengeListing.model'
 
 
 const pathMap: Routes=
@@ -25,6 +27,7 @@ const pathMap: Routes=
 	{path:'Archive', component:ArchiveComponent},
   {path:'newChallenge', component:AddChallengeComponent},
   {path:'today/:id/edit', component:AddChallengeComponent},
+  {path:'reported', component:ReportPanelComponent},
 	{path:'not_found', component:PageNotFoundComponentComponent},
 	{path:'**', redirectTo:'/not_found'}
 ];
@@ -40,7 +43,8 @@ const pathMap: Routes=
     ChallengeResponseComponent,
     AddChallengeComponent,
     mouseoverHighlight,
-    PageNotFoundComponentComponent
+    PageNotFoundComponentComponent,
+    ReportPanelComponent
  
 
 
@@ -51,7 +55,7 @@ const pathMap: Routes=
     HttpModule,
     RouterModule.forRoot(pathMap)
   ],
-  providers: [],
+  providers: [challengeListing],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

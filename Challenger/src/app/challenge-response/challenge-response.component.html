@@ -4,7 +4,7 @@
 				<div class="row mobileMinHeight" mouseoverHighlight style="height: 130px;text-overflow: ellipsis; overflow: hidden;">
 
 					<div  class="mobileMinheadingCenter col-sm-3 col-xs-12 text-center push-left" style="padding: 20px;">
-						<img src="https://athlonecommunityradio.ie/wp-content/uploads/2017/04/placeholder.png" style="max-height: 110px; ">
+						<img src={{panelChallenge.challengeImgUrl}} style="max-height: 110px; ">
 					</div>
 
 					<div class="col-sm-7" style="border-right: 1px solid" >
@@ -13,8 +13,8 @@
 									<span class="glyphicon glyphicon-pencil"></span>
 								</a>
 						</div>
-						<h3 class="mobileMinheadingCenter">Heading</h3>
-							<p > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porta metus nisi, vel laoreet urna accumsan quis. Ut fermentum ornare lectus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porta metus nisi, vel laoreet urna accumsan quis. Ut fermentum ornare lectus. Phasellus laoreet nunc gravida quam varius, non ultricies ligula sodales. Duis lacinia id nisl quis finibus. Maecenas cursus nulla tincidunt, dignissim nisi eget, ultrices risus. Donec varius ipsum diam, in ornare erat ultrices ac. In ac euismod mi, ut tristique lacus. Maecenas maximus urna non consectetur pellentesque.    
+						<h3 class="mobileMinheadingCenter">{{panelChallenge.challengeHeading}}</h3>
+							<p > {{panelChallenge.challengeText}}
 							</p>
 					</div>
 
@@ -23,12 +23,12 @@
 							<div class="col-xs-6">
 
 							 <div class="row">
-							 	422
+							 	{{panelChallenge.challengeUpvote}}
 							 </div>
 
 							 <div class="row">
 							 	<span class="glyphicons-arrow-up"></span>
-							 	<span class="glyphicon glyphicon-chevron-up" style="color:#999;"></span>
+							 	<span class="glyphicon glyphicon-chevron-up" style="color:#999;cursor: pointer;" (click)="upvote()"></span>
 							 </div>
 							 
 
@@ -36,10 +36,10 @@
 
 							<div class="col-xs-6">			
 								<div class="row">
-								213
+								{{panelChallenge.challengeDownvote}}
 								</div>
 								<div class="row">
-									<span class="glyphicon glyphicon-chevron-down" style="color:#999;"></span>
+									<span class="glyphicon glyphicon-chevron-down" style="color:#999;cursor: pointer;" (click)="downvote()"></span>
 								</div>
 							</div>
 								

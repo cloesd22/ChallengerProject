@@ -35,12 +35,12 @@
 						 
 						</nav>
 					
+						<div *ngFor="let listitem of challengeListing">	
+							<app-challenge-response [channelInput]="listitem"></app-challenge-response>
+						</div>
+
 						
 
-						<app-challenge-response></app-challenge-response>
-						<app-challenge-response></app-challenge-response>
-						<app-challenge-response></app-challenge-response>
-						<app-challenge-response></app-challenge-response>
 				
 			</div>
 		</div>

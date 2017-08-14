@@ -2,5 +2,73 @@
 	height: 100%;
 	width: 100%;
 	margin:auto;
-	background-image:url(https://newevolutiondesigns.com/images/freebies/cool-wallpaper-19.jpg);
+
+}
+
+.imageChoiceContainer{
+	padding: 5%;
+	height: 100%;
+	flex-basis: 50%;
+	margin:auto;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+
+
+
+}
+
+.bigbuttons{
+	height:100px;
+	width:300px;
+	border-radius: 15px;
+	background-color: black;
+
+
+}
+
+.bigbuttons { 
+  color: #FFFFFF; 
+  background-color: #222222; 
+  border-color: #464647; 
+} 
+ 
+.bigbuttons:hover, 
+.bigbuttons:focus, 
+.bigbuttons:active, 
+.bigbuttons.active, 
+.open .dropdown-toggle.bigbuttons { 
+  color: #FFFFFF; 
+  background-color: #000000; 
+  border-color: #464647; 
+} 
+ 
+.bigbuttons:active, 
+.bigbuttons.active, 
+.open .dropdown-toggle.bigbuttons { 
+  background-image: none; 
+} 
+ 
+.bigbuttons.disabled, 
+.bigbuttons[disabled], 
+fieldset[disabled] .bigbuttons, 
+.bigbuttons.disabled:hover, 
+.bigbuttons[disabled]:hover, 
+fieldset[disabled] .bigbuttons:hover, 
+.bigbuttons.disabled:focus, 
+.bigbuttons[disabled]:focus, 
+fieldset[disabled] .bigbuttons:focus, 
+.bigbuttons.disabled:active, 
+.bigbuttons[disabled]:active, 
+fieldset[disabled] .bigbuttons:active, 
+.bigbuttons.disabled.active, 
+.bigbuttons[disabled].active, 
+fieldset[disabled] .bigbuttons.active { 
+  background-color: #222222; 
+  border-color: #464647; 
+} 
+ 
+.bigbuttons .badge { 
+  color: #222222; 
+  background-color: #FFFFFF; 
 }

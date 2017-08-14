@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {challenge} from '../models/challenge.model';
+import {challengeListing} from '../models/challengeListing.model';
 
 @Component({
   selector: 'app-today-challenge-main',
@@ -10,10 +11,11 @@ export class TodayChallengeMainComponent implements OnInit {
 
 	todaysChallenge:challenge;
 
-  constructor() { }
+
+  constructor(private chlnglst:challengeListing) { }
 
   ngOnInit() {
-  	
+  
   }
 
 }
