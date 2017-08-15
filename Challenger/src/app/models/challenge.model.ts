@@ -1,13 +1,14 @@
 
 export class challenge{
 
-	private challengeID : string;
+	public challengeID : string;
 	private challengeHeading :  string;
 	private challengeText: string;
 	private challengeDate: Date;
 	private challengeImgUrl:string;
 	private challengeUpvote:number;
 	private challengeDownvote:number;
+	private report:number=0;
 
 
 	constructor(id,heading,text,date,imgurl){
@@ -21,6 +22,9 @@ export class challenge{
 
 	}
 
+	getchallengeID(){
+		return this.challengeID;
+	}
 
 	addUpvote(){
 		this.challengeUpvote++;
@@ -28,6 +32,10 @@ export class challenge{
 
 	addDownvote(){
 		this.challengeDownvote++;
+	}
+
+	addReport(){
+		this.report++;
 	}
 
 	updateChallenge(id=this.challengeID,

@@ -26,8 +26,8 @@ const pathMap: Routes=
 	{path:'tommorow', component:TommorowChallengeMainComponent},
 	{path:'Archive', component:ArchiveComponent},
   {path:'newChallenge', component:AddChallengeComponent},
+  {path:'tommorow/:id/report', component:ReportPanelComponent},
   {path:'today/:id/edit', component:AddChallengeComponent},
-  {path:'reported', component:ReportPanelComponent},
 	{path:'not_found', component:PageNotFoundComponentComponent},
 	{path:'**', redirectTo:'/not_found'}
 ];

@@ -30,6 +30,15 @@ export class challengeListing{
 
 	}
 
+	getFromListByID(id:string){
+
+		const challengesender = this.challengeList.filter((challengetoReturn)=>{
+			return challengetoReturn.challengeID ==id;
+			
+		});
+			return challengesender;
+	}
+
 
 
 }

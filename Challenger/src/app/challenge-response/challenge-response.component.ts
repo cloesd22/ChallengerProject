@@ -9,11 +9,14 @@ import {challenge} from '../models/challenge.model';
 export class ChallengeResponseComponent implements OnInit {
 
 	@Input('channelInput') panelChallenge:challenge;
-	challengeid:number=1;
+  panelid:string;
+	
 	
   constructor() { }
 
   ngOnInit() {
+    this.panelid = this.panelChallenge.getchallengeID();
+
   }
 
   upvote(){
@@ -25,5 +28,7 @@ export class ChallengeResponseComponent implements OnInit {
   	this.panelChallenge.addDownvote;
   	console.log("downvote");
   }
+
+
 
 }

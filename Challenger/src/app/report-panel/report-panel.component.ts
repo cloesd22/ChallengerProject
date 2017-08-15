@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Router,ActivatedRoute} from '@angular/router';
+import {challenge} from '../models/challenge.model';
+import {challengeListing} from '../models/challengeListing.model';
 
 @Component({
   selector: 'app-report-panel',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportPanelComponent implements OnInit {
 
-  constructor() { }
+	challengetoReport:challenge;
+
+  constructor(private router:Router, private actRoute:ActivatedRoute, private chlnglist:challengeListing) { }
 
   ngOnInit() {
+
+
+  	this.challengetoReport = this.chlnglist.getFromListByID(this.actRoute.snapshot.params['id'])[0];
+  	
+
   }
+
+
 
 }
