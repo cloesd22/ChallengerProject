@@ -3,26 +3,27 @@
 			<div class="panel panel-inverse center-block" style="background-color: #222; color:#999">
 				<div class="panel-body " >
 				<div class="row">
-					
+					<form (ngSubmit)="addChallenge(f)" #f = ngForm>
 					<div class="col-sm-12">
-						<div class="form-group">
-							<input type="text" class="form-control" id="usr" placeholder="Challenge Title">
-						</div>
+
+					<div class="form-group">
+						<input ngModel name="title" type="text" class="form-control" id="usr" placeholder="Challenge Title">
+					</div>
 
 					<hr>
 					<div class="form-group">
 						<label for="comment">Description:</label>
-							<textarea class="form-control" rows="5" id="comment"></textarea>
+							<textarea ngModel name="description" class="form-control" rows="5" id="comment"></textarea>
 					</div>
-					<div class="row text-center">
 
-					
-						<button class="btn btn-primary">Cancel</button>
-						<button class="btn btn-success">Submit</button>
+					<div class="row text-center">
+				
+						<button name="cancel" type="button"  (click)="returnToTmr()" class="btn btn-primary">Cancel</button>
+						<button name="submit" tclass="btn btn-success">Submit</button>
 					
 					</div>
 				</div>
-
+				</form>
 				</div>
 			</div>
 		</div>

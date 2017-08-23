@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {NgForm} from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-add-challenge',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddChallengeComponent implements OnInit {
 
-  constructor() { }
+	@ViewChild('f') formdetails:NgForm;
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
+
+  addChallenge(){
+
+  	console.log(this.formdetails.value.title);
+	console.log(this.formdetails.value.description);
+  }
+
+  returnToTmr(){
+  	this.router.navigate(['/tommorow']);
+  }
+
 
 }
