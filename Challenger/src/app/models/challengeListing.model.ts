@@ -18,11 +18,12 @@ export class challengeListing{
 	}
 
 	fillList(){
-		
+		//pulls challenge data from backend
 		
 	}
 
 	getList(){
+		//passes challengeList on request via subject
 		this.ChallengeListLink.next(this.challengeList);
 	}
 
@@ -33,8 +34,7 @@ export class challengeListing{
 	getFromListByID(id:string){
 
 		const challengesender = this.challengeList.filter((challengetoReturn)=>{
-			return challengetoReturn.challengeID ==id;
-			
+			return challengetoReturn.challengeID ==id;		
 		});
 			return challengesender;
 	}

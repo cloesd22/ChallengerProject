@@ -1,72 +1,50 @@
 
-			<div class="panel panel-inverse center-block " mouseoverHighlight  style="background-color: #222; color:#999">
-				<div class="panel-body">
-				<div class="row mobileMinHeight" mouseoverHighlight style="height: 130px;text-overflow: ellipsis; overflow: hidden;">
 
-					<div  class="mobileMinheadingCenter col-sm-3 col-xs-12 text-center push-left" style="padding: 20px;">
-						<img src={{panelChallenge.challengeImgUrl}} style="max-height: 110px; ">
-					</div>
+<div class="panelTheme m-3" style="max-height: 250px; width:auto;">
+	<div class="container">
 
-					<div class="col-sm-7" style="border-right: 1px solid" >
-						<div mouseoverHighlight class="pull-right">
-								<a [routerLink]="['1/edit']" style="cursor: pointer;">
-									<span class="glyphicon glyphicon-pencil"></span>
-								</a>
-						</div>
-						<h3 class="mobileMinheadingCenter">{{panelChallenge.challengeHeading}}</h3>
-							<p > {{panelChallenge.challengeText}}
-							</p>
-					</div>
+	<div class="row">
+		<p class="mx-auto d-block d-sm-none">{{panelChallenge.challengeHeading}}</p>
+		<div class="col-9 col-md-3  align-self-center mt-1">
+			<div class="text-center">
+				<img class="borderThin" src={{panelChallenge.challengeImgUrl}} style="max-height: 120px; ">
+			</div>
+		</div>
 
-					<div class="col-sm-2" mouseoverHighlight >
-						<div class="row" style="vertical-align; ; text-align: center;">
-							<div class="col-xs-6">
+		<div class="col-0 col-sm-6 d-none d-sm-block pt-md-5">
+			<h4 class="mr-auto m-md-auto text-justify text-md-center">{{panelChallenge.challengeHeading}}
+			</h4>
+			<div class="p-3 m-auto d-none d-lg-block justify-content-start text-justify align-self-sm-center" style="max-height: 75px; overflow: hidden;">
+				<p style="max-height: 120px">{{panelChallenge.challengeText}}
+				</p>						
+			</div>
+		</div>
 
-							 <div class="row">
-							 	{{panelChallenge.challengeUpvote}}
-							 </div>
-
-							 <div class="row">
-							 	<span class="glyphicons-arrow-up"></span>
-							 	<span class="glyphicon glyphicon-chevron-up" style="color:#999;cursor: pointer;" (click)="upvote()"></span>
-							 </div>
-							 
-
-							</div>
-
-							<div class="col-xs-6">			
-								<div class="row">
-								{{panelChallenge.challengeDownvote}}
-								</div>
-								<div class="row">
-									<span class="glyphicon glyphicon-chevron-down" style="color:#999;cursor: pointer;" (click)="downvote()"></span>
-								</div>
-							</div>
-								
-							<div class="row" style="padding-top: 50px">
-								<button class="btn btn-primary">Support</button>
-							</div>
-
-							<div class="row">
-								<div class="pull-right" style="padding-right:30px; padding-bottom: 10px;">
-									<a style="cursor: pointer;">
-										<span [routerLink]="['/tommorow/',panelid,'report']" class="glyphicon glyphicon-warning-sign"></span>
-										<router-outlet></router-outlet>
-									</a>
-								</div>
-
-							</div>
-
-						</div>
-
-						
-					</div>
-
-						
-				</div>
-				</div>
-
-				
-
+		<div class="d-inline-block col-3 mt-sm-4 mb-sm-1 mb-4 align-self-center text-center">
+			<div class="d-md-inline-block p-2 mx-auto align-middle clickable borderThin">
+				<p>{{panelChallenge.challengeUpvote}}</p>
+				<i class="fa fa-thumbs-up lead" aria-hidden="true" >  </i>
 			</div>
 
+			<div class="d-none d-lg-inline-block" style="width:30px;">
+			</div>
+
+			<div class="d-md-inline-block p-2 mx-auto align-middle clickable borderThin">
+				<p>{{panelChallenge.challengeDownvote}}</p>
+				<i class="fa fa-thumbs-down lead" aria-hidden="true">  </i>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="row  align-self-end mt-auto" style="min-height: 10px;">
+			<div class="col-12 ">
+				<div class="float-right clickable ">
+					<i class="fa fa-snowflake-o lead" aria-hidden="true"> Report </i>	
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div>

@@ -11,15 +11,17 @@ import { HomeComponent } from './home/home.component';
 import { ArchiveComponent } from './archive/archive.component';
 import { ChallengeResponseComponent } from './challenge-response/challenge-response.component';
 import { AddChallengeComponent } from './add-challenge/add-challenge.component';
-import {mouseoverHighlight} from './challenge-response/directiveChallenge/mouseoverReaction.directive';
+import {mouseoverHighlight} from './directives/uiDirectives/mouseoverReaction.directive';
 import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
 import { ReportPanelComponent } from './report-panel/report-panel.component';
-import {challengeListing} from './models/challengeListing.model'
+import {challengeListing} from './models/challengeListing.model';
+import { CommentPanelComponent } from './comment-panel/comment-panel.component'
 
 
 const pathMap: Routes=
 [
 	{path:'', component:HomeComponent},
+  {path:'comment', component:CommentPanelComponent},
 	{path:'yesterday', component:YesterdayChallengeMainComponent},
 	{path:'today', component:TodayChallengeMainComponent},
   {path:'home', component:HomeComponent},
@@ -44,7 +46,8 @@ const pathMap: Routes=
     AddChallengeComponent,
     mouseoverHighlight,
     PageNotFoundComponentComponent,
-    ReportPanelComponent
+    ReportPanelComponent,
+    CommentPanelComponent
  
 
 

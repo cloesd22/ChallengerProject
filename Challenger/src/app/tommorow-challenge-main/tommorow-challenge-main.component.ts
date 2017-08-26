@@ -20,13 +20,13 @@ export class TommorowChallengeMainComponent implements OnInit {
 
 
 		this.chlnglst.getList();
-		console.log("ayboss");
+		
 
 		this.challengeListing = this.chlnglst.challengeList;
 
 
 		this.chlnglst.ChallengeListLink.subscribe((data:challenge[])=>{
-			console.log("fakumen");
+			
 		this.challengeListing = data;})
 	}
 

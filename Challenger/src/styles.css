@@ -4,7 +4,15 @@
   margin-left: auto;  
 }  
 
+.clickable{
+    cursor: pointer;
+}
 
+.borderThin{
+    border: 1px gray inset;
+    border-radius: 15px;
+
+}
 
 .vertical-align {
 	position:relative;
@@ -17,6 +25,7 @@
 	 color:#999;
 	 border-radius: 5px;
 }
+
 
 .col-xs-offset-12 {
     margin-left: 100%;
