@@ -28,13 +28,10 @@ export class mouseoverHighlight implements OnInit{
 	@HostListener('mouseleave') mouseleaveEvent(evendData:Event){
 		console.log("MouseEnter leave");
 
-		setTimeout(()=>{
-
+	
 			this.renderer.setStyle(this.elemref.nativeElement,'overflow','hidden');
 			this.renderer.setStyle(this.elemref.nativeElement,'height',this.defaultHeight);
 			this.renderer.setStyle(this.elemref.nativeElement,'background-color',this.defaultcolor);
-
-		},400);
 
 
 	}

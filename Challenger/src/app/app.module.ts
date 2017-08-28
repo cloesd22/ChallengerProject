@@ -15,7 +15,9 @@ import {mouseoverHighlight} from './directives/uiDirectives/mouseoverReaction.di
 import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
 import { ReportPanelComponent } from './report-panel/report-panel.component';
 import {challengeListing} from './models/challengeListing.model';
-import { CommentPanelComponent } from './comment-panel/comment-panel.component'
+import { CommentPanelComponent } from './comment-panel/comment-panel.component';
+import { HamburgerOnClickDirective } from './directives/uiDirectives/hamburger-on-click.directive';
+import {StandardComsService} from './services/ui/standard-coms.service';
 
 
 const pathMap: Routes=
@@ -47,7 +49,8 @@ const pathMap: Routes=
     mouseoverHighlight,
     PageNotFoundComponentComponent,
     ReportPanelComponent,
-    CommentPanelComponent
+    CommentPanelComponent,
+    HamburgerOnClickDirective
  
 
 
@@ -58,7 +61,7 @@ const pathMap: Routes=
     HttpModule,
     RouterModule.forRoot(pathMap)
   ],
-  providers: [challengeListing],
+  providers: [challengeListing,StandardComsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

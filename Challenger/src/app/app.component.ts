@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef, EventEmitter} from '@angular/core';
+import {StandardComsService} from './services/ui/standard-coms.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+
+  @ViewChild('collapsableMenu') hamburgerMenu;
+
+  burgerViewSender = new EventEmitter<object>();
+
+  constructor(private coms:StandardComsService){
+
+  }
+
+  onHamburgerClick(){
+  	this.coms.emitPackage(this.hamburgerMenu);
+  }
+
 }

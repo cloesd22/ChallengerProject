@@ -1,24 +1,27 @@
 <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #222">
   <div class="container">
-      <a class="navbar-brand" [routerLink]="['home']">Challenger</a>
-      <ul class="navbar-nav m-auto">
+      <a class="navbar-brand mx-auto mx-sm-3" [routerLink]="['home']">Challenger</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav" (click)="onHamburgerClick()" ><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse text-center mr-5" id="navbarNav" appHamburgerOnClick>
+            <ul class="collapse navbar-nav m-auto">
 
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['/yesterday']"> Yesterday's Challenge </a>
-        </li>
+              <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['/yesterday']"> Yesterday's Challenge </a>
+              </li>
 
-        <li class="nav-item" routerLinkActive="active">
-         <a class="nav-link" [routerLink]="['/today']"> Today's Challenge </a>
-        </li>
+              <li class="nav-item" routerLinkActive="active">
+               <a class="nav-link" [routerLink]="['/today']"> Today's Challenge </a>
+              </li>
 
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['/tommorow']"> Tommorow's Challenge </a>
-        </li>
+              <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['/tommorow']"> Tommorow's Challenge </a>
+              </li>
 
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['/Archive']"> Archive </a>
-        </li>
-      </ul>
+              <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['/Archive']"> Archive </a>
+              </li>
+            </ul>
+          </div>
   </div>  
 </nav>
 
