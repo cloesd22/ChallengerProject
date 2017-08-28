@@ -18,6 +18,7 @@ import {challengeListing} from './models/challengeListing.model';
 import { CommentPanelComponent } from './comment-panel/comment-panel.component';
 import { HamburgerOnClickDirective } from './directives/uiDirectives/hamburger-on-click.directive';
 import {StandardComsService} from './services/ui/standard-coms.service';
+import {commentListing} from './models/comment-listing.model';
 
 
 const pathMap: Routes=
@@ -61,7 +62,7 @@ const pathMap: Routes=
     HttpModule,
     RouterModule.forRoot(pathMap)
   ],
-  providers: [challengeListing,StandardComsService],
+  providers: [challengeListing,StandardComsService,commentListing],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

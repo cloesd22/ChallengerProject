@@ -8,107 +8,93 @@
 			</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="container">
-			<div class="panel panel-inverse center-block" style="max-width: 500px; background-color: #222; color:#999">
-				<div class="panel-body " >
-				<div class="row">
-					<div class="col-xs-12 col-sm-3 text-center" style="padding:10px;">
-						<img src="https://athlonecommunityradio.ie/wp-content/uploads/2017/04/placeholder.png" style="max-width: 100px">
-					</div>
-					<div class="col-xs-12 col-sm-9" style="padding:5%">
-						<p> Today's challenge is some sort of something, and then something
-						so that you can something with something</p>
-					</div>
-				</div>
-				</div>
-			</div>
-		</div>
-	</div>
+
+		<app-challenge-response [channelInput]="todaysChallenge"></app-challenge-response>
+
 	<div class="row">
 		<div class="container">
 			<div class="panel panel-inverse">
 				<div class="panel-body">
 	
 					<nav class="navbar navbar-expand-sm navbar-dark d-block d-sm-none panelTheme" style="background-color: #222">
-  <div class="container">
+					  <div class="container">
 
-	<div class="row mx-auto">
-		<div class="d-flex flex-row">
-			<button class="btn btn-dark m-1">Top</button>
-			<button class="btn btn-dark m-1">Recent</button>
-			<button class="btn btn-dark m-1">Hated</button>
-		</div>
-	</div>
+						<div class="row mx-auto">
+							<div class="d-flex flex-row">
+								<button class="btn btn-dark m-1">Top</button>
+								<button class="btn btn-dark m-1">Recent</button>
+								<button class="btn btn-dark m-1">Hated</button>
+							</div>
+						</div>
 
-	<div class="row mx-auto">
-		<div class="d-flex flex-row">
-			<div class="btn-group">
-			<input type="text" class="form-control" placeholder="Search">
-			<button class="btn btn-dark">Search</button>
-			</div>
-		</div>
-	</div>
-  </div> 
-</nav>
-		
-<nav class="navbar navbar-expand-sm navbar-dark d-none d-sm-block d-md-none panelTheme" style="background-color: #222">
-  <div class="container">
+						<div class="row mx-auto">
+							<div class="d-flex flex-row">
+								<div class="btn-group">
+								<input type="text" class="form-control" placeholder="Search">
+								<button class="btn btn-dark">Search</button>
+								</div>
+							</div>
+						</div>
+					  </div> 
+					</nav>
+							
+					<nav class="navbar navbar-expand-sm navbar-dark d-none d-sm-block d-md-none panelTheme" style="background-color: #222">
+					  <div class="container">
 
-	<div class="row mx-auto">
-		<div class="d-flex flex-row ">
-			<div class="btn-group">
-			<button class="btn btn-dark">Top</button>
-			<button class="btn btn-dark">Recent</button>
-			<button class="btn btn-dark">Hated</button>
-			</div>
-		</div>
-	</div>
+						<div class="row mx-auto">
+							<div class="d-flex flex-row ">
+								<div class="btn-group">
+								<button class="btn btn-dark">Top</button>
+								<button class="btn btn-dark">Recent</button>
+								<button class="btn btn-dark">Hated</button>
+								</div>
+							</div>
+						</div>
 
-	<div class="row mx-auto">
-		<div class="d-flex flex-row ">
-			<div class="btn-group">
-			<input type="text" class="form-control" placeholder="Search">
-			<button class="btn btn-dark">Search</button>
-			</div>
-		</div>
-	</div>
-  </div> 
-</nav>
+						<div class="row mx-auto">
+							<div class="d-flex flex-row ">
+								<div class="btn-group">
+								<input type="text" class="form-control" placeholder="Search">
+								<button class="btn btn-dark">Search</button>
+								</div>
+							</div>
+						</div>
+					  </div> 
+					</nav>
 
-<nav class="navbar navbar-expand-sm navbar-dark d-none d-sm-none d-md-block panelTheme" style="background-color: #222">
-  <div class="container">
+					<nav class="navbar navbar-expand-sm navbar-dark d-none d-sm-none d-md-block panelTheme" style="background-color: #222">
+					  <div class="container">
 
-	<div class="row float-left">
-		<div class="d-flex flex-row">
-			<div class="btn-group">
-			<button class="btn btn-dark">Top</button>
-			<button class="btn btn-dark">Recent</button>
-			<button class="btn btn-dark">Hated</button>
-			</div>
-		</div>
-	</div>
+						<div class="row float-left">
+							<div class="d-flex flex-row">
+								<div class="btn-group">
+								<button class="btn btn-dark">Top</button>
+								<button class="btn btn-dark">Recent</button>
+								<button class="btn btn-dark">Hated</button>
+								</div>
+							</div>
+						</div>
 
-	<div class="row float-right">
-		<div class="d-flex flex-row">
-			<div class="btn-group">
-			<input type="text" class="form-control" placeholder="Search">
-			<button class="btn btn-dark">Search</button>
-			</div>
-		</div>
-	</div>
-  </div> 
-</nav>
+						<div class="row float-right">
+							<div class="d-flex flex-row">
+								<div class="btn-group">
+								<input type="text" class="form-control" placeholder="Search">
+								<button class="btn btn-dark">Search</button>
+								</div>
+							</div>
+						</div>
+					  </div> 
+					</nav>
+					
+					<div *ngIf="attachedCommentTree.length == 0" class="p-5">
+						<h3 class="display-4 text-center text-justify">No comments found.</h3>
+					</div>
 
-
-
-
+					<div *ngFor="let item of attachedCommentTree">
+						<app-comment-panel></app-comment-panel>
+					</div>
 
 						
-						<app-comment-panel></app-comment-panel>
-						<app-comment-panel></app-comment-panel>
-						<app-comment-panel></app-comment-panel>
-						<app-comment-panel></app-comment-panel>
 
 				</div>
 			</div>

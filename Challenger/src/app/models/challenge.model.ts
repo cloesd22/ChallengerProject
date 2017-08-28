@@ -38,13 +38,6 @@ export class challenge{
 		this.report++;
 	}
 
-	updateChallenge(id=this.challengeID,
-					heading=this.challengeHeading,
-					text=this.challengeText,
-					date=this.challengeDate,
-					imgurl=this.challengeImgUrl)
-	{
-		//updates any parameters passed, while setting any unset parameter to it's original value
-	}
+
 
 }
