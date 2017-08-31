@@ -28,6 +28,7 @@ export class TodayChallengeMainComponent implements OnInit {
 
 	console.log(this.attachedCommentTree);
 
+
   }
 
 

@@ -1,0 +1,22 @@
+How the dropdown system works.
+
+
+There are currently at the time of writting two dropdown direvtives
+
+hamburger-on-click.directive.ts (used for controling nav menus that collapse on 'collapse' being added to their class)
+
+dropdown-on-click.directive.ts (used for controlling comment page dropdowns)
+
+
+How they work:
+On button click they trigger a function in their .ts files. This function
+uses the ui 'standardComs' service to pass an the element ID of the dropdown being referenced.
+
+Because the element ID for the comments are actually composed of the unique commentID the value being passed
+using the service is actually unique to each comment object.
+
+The service then emits the unique element ID to all listeners (that is all UI elements).
+
+All directive elements are listening to the global UI coms ervice, and thus when they 'hear' this emission they check their current
+id (the id of the element their attached to) with the id being emitted. IF it IS them, they trigger.
+

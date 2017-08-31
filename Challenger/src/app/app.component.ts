@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'app';
 
 
-  @ViewChild('collapsableMenu') hamburgerMenu;
+  @ViewChild('collapsableMenu') hamburgerMenu:ElementRef;
 
   burgerViewSender = new EventEmitter<object>();
 
@@ -19,7 +19,7 @@ export class AppComponent {
   }
 
   onHamburgerClick(){
-  	this.coms.emitPackage(this.hamburgerMenu);
+  	this.coms.emitPackage(this.hamburgerMenu.nativeElement.id);
   }
 
 }

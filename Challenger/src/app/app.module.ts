@@ -19,6 +19,7 @@ import { CommentPanelComponent } from './comment-panel/comment-panel.component';
 import { HamburgerOnClickDirective } from './directives/uiDirectives/hamburger-on-click.directive';
 import {StandardComsService} from './services/ui/standard-coms.service';
 import {commentListing} from './models/comment-listing.model';
+import { DropdownOnClickDirective } from './directives/uiDirectives/dropdown-on-click.directive';
 
 
 const pathMap: Routes=
@@ -51,7 +52,8 @@ const pathMap: Routes=
     PageNotFoundComponentComponent,
     ReportPanelComponent,
     CommentPanelComponent,
-    HamburgerOnClickDirective
+    HamburgerOnClickDirective,
+    DropdownOnClickDirective
  
 
 

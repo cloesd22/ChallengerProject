@@ -1,35 +1,93 @@
-<div class="panelTheme" style="min-height: 150px; width:auto;">
-	<div class="container">
-	<div class="row">
-		<div class="col-9">
-			<h2 class="mr-auto p-3">Title</h2>
-			<div class="p-3 justify-content-start text-justify">
-				<p>Text that user inserts is shown here:
-					Text that user inserts is shown here:
-					Text that user inserts is shown here:
-				</p>						
+<div class="panelTheme card d-sm-none m-3" style="min-height: 150px;">
+	<div class="card-body">
+		<div class="d-flex flex-column">
+			<div class="d-flex flex-row">
+				<p class="font-weight-bold">Anonymous</p>
 			</div>
-		</div>
-		<div class="d-inline-block col-3 mt-5 align-self-center  text-center">
-				<div class="d-inline-block p-2 mx-auto align-middle clickable borderThin">
-					<p>320</p>
-					<i class="fa fa-thumbs-up lead" aria-hidden="true" >  </i>
-				</div>
-				<div class="d-inline-block" style="width:30px;">
+			<div class="d-flex flex-row" style="overflow: hidden; text-overflow: ellipsis; word-break: keep-all;">
+				<p>{{commentDetails.characterText}}</p>
+			</div>
 
+			<div class="d-flex flex-row justify-content-around">
+				<button class="btn btn-dark"><i class="fa fa-caret-square-o-down" aria-hidden="true"> More Comments</i>  </button>
+				
+				<div class="dropdown">
+
+				<button class="btn btn-dark"><i class="fa fa-caret-square-o-down" aria-hidden="true" (click)="onClickMoreOptions()"> More Options</i></button>
+					<div class="dropdown-menu show" id="commentDropdown{{this.commentDetails.commentID}}" #moreOptionsDropdown appDropdownOnClick>
+						<a class="dropdown-item" >Reply</a>
+						<a class="dropdown-item" >PM User</a>
+						<a class="dropdown-item" >Upvote</a>
+						<a class="dropdown-item" >Downvote</a>
+						<a class="dropdown-item" >Report</a>
+					</div>
 				</div>
-				<div class="d-inline-block p-2 mx-auto align-middle clickable borderThin">
-					<p>432</p>
-					<i class="fa fa-thumbs-down lead" aria-hidden="true">  </i>
-				</div>
+
+			</div>	
 		</div>
 	</div>
-		<div class="row">
-			<div class="col-12 ">
-				<div class="p-3 float-right clickable">
-					<i class="fa fa-snowflake-o lead" aria-hidden="true"> Report </i>	
-				</div>
+
+	
+</div>
+
+<div class="panelTheme card d-none d-sm-block d-md-none m-3" style="min-height: 160px;">
+	<div class="card-body">
+		<div class="d-flex flex-row ">
+			<p class="font-weight-bold">Anonymous</p>
+			<button class="btn btn-dark ml-auto"><i class="fa fa-reply" aria-hidden="true">  Reply  </i></button>
+		</div>
+		<div class="d-flex flex-row mr-4 my-2" style="overflow: hidden; text-overflow: ellipsis; word-break: break-all;">
+			<p>{{commentDetails.characterText}}</p>
+		</div>
+		<div class="d-flex flex-row">
+			<div class="btn-group">
+				<button class="btn btn-dark"><i class="fa fa-caret-square-o-down" aria-hidden="true"> More Comments</i>  </button>
+				<button class="btn btn-dark">PM User</button>
+				<button class="btn btn-dark"><i class="fa fa-thumbs-o-up fa-1x" aria-hidden="true"> </i></button>
+				<button class="btn btn-dark"><i class="fa fa-thumbs-o-down fa-1x" aria-hidden="true"> </i></button>
+				<button class="btn btn-dark">Report</button>
 			</div>
 		</div>
+	</div>
+</div>
+
+<div class="panelTheme card d-none d-md-block m-3" style="min-height: 170px;">
+	<div class="card-body">
+		<div class="d-flex flex-row justify-content-between">
+			<div class="d-flex flex-column  justify-content-between pl-3" style="min-width: 85%">
+				<div class="d-flex flex-row justify-content-between">
+					<p class="font-weight-bold"> Anonymous </p>
+					<div class="btn-group mr-3">
+						<button class="btn btn-dark">Report</button>
+						<button class="btn btn-dark">PM User</button>
+						<button class="btn btn-dark"><i class="fa fa-reply" aria-hidden="true">  Reply  </i></button>
+					</div>
+				</div>
+
+				<div class="row my-4 mr-4" style="overflow: hidden; text-overflow: ellipsis; word-break: break-all;">
+					<p class="" style="max-width: 85%"> {{commentDetails.characterText}} </p>
+				</div>
+					
+				<div class="row">
+					<button class="btn btn-dark">
+					<i class="fa fa-caret-square-o-down" aria-hidden="true"> More Comments</i>  
+							 
+					</button>
+				</div>
+			</div>
+
+			<div class="d-flex flex-column justify-content-around">
+
+				<button class="btn btn-dark btn-lg">
+					<i class="fa fa-thumbs-o-up fa-1x" aria-hidden="true">	&nbsp;{{commentDetails.commentUpvotes}} </i>
+				</button>	
+
+				<button class="btn btn-dark btn-lg">
+					<i class="fa fa-thumbs-o-down fa-1x" aria-hidden="true">  &nbsp;{{commentDetails.commentDownvotes}}  </i>
+				</button>
+
+			</div>
+		</div>
+
 	</div>
 </div>
