@@ -11,9 +11,8 @@
 			<div class="d-flex flex-row justify-content-around">
 				<button class="btn btn-dark"><i class="fa fa-caret-square-o-down" aria-hidden="true"> More Comments</i>  </button>
 				
-				<div class="dropdown">
-
-				<button class="btn btn-dark"><i class="fa fa-caret-square-o-down" aria-hidden="true" (click)="onClickMoreOptions()"> More Options</i></button>
+				<div class="dropdown" (click)="onClickMoreOptions()">
+					<button class="btn btn-dark"><i class="fa fa-caret-square-o-down" aria-hidden="true"> More Options</i></button>
 					<div class="dropdown-menu show" id="commentDropdown{{this.commentDetails.commentID}}" #moreOptionsDropdown appDropdownOnClick>
 						<a class="dropdown-item" >Reply</a>
 						<a class="dropdown-item" >PM User</a>
@@ -23,11 +22,10 @@
 					</div>
 				</div>
 
-			</div>	
+			</div>
+
 		</div>
 	</div>
-
-	
 </div>
 
 <div class="panelTheme card d-none d-sm-block d-md-none m-3" style="min-height: 160px;">
@@ -43,13 +41,25 @@
 			<div class="btn-group">
 				<button class="btn btn-dark"><i class="fa fa-caret-square-o-down" aria-hidden="true"> More Comments</i>  </button>
 				<button class="btn btn-dark">PM User</button>
-				<button class="btn btn-dark"><i class="fa fa-thumbs-o-up fa-1x" aria-hidden="true"> </i></button>
-				<button class="btn btn-dark"><i class="fa fa-thumbs-o-down fa-1x" aria-hidden="true"> </i></button>
+
+				<button class="btn btn-dark" 
+					popover={{commentDetails.commentUpvotes}}
+	        		triggers="focus">
+        		<i class="fa fa-thumbs-o-up fa-1x" aria-hidden="true"> </i></button>
+
+				<button class="btn btn-dark"
+					popover={{commentDetails.commentDownvotes}}
+	        		triggers="focus">
+				 <i class="fa fa-thumbs-o-down fa-1x" aria-hidden="true"> </i></button>
+
+
 				<button class="btn btn-dark">Report</button>
 			</div>
 		</div>
 	</div>
 </div>
+
+
 
 <div class="panelTheme card d-none d-md-block m-3" style="min-height: 170px;">
 	<div class="card-body">
@@ -91,3 +101,4 @@
 
 	</div>
 </div>
+
