@@ -14,25 +14,45 @@
 				<div class="dropdown" (click)="onClickMoreOptions()">
 					<button class="btn btn-dark"><i class="fa fa-caret-square-o-down" aria-hidden="true"> More Options</i></button>
 					<div class="dropdown-menu show" id="commentDropdown{{this.commentDetails.commentID}}" #moreOptionsDropdown appDropdownOnClick>
-						<a class="dropdown-item" >Reply</a>
+						<a class="dropdown-item" (click)="openReply()">Reply</a>
 						<a class="dropdown-item" >PM User</a>
 						<a class="dropdown-item" >Upvote</a>
 						<a class="dropdown-item" >Downvote</a>
 						<a class="dropdown-item" >Report</a>
 					</div>
 				</div>
-
 			</div>
-
 		</div>
 	</div>
+
+			<div *ngIf="replyOpen" class="d-flex flex-column mt-2 mx-auto">
+
+			<div class="d-flex flex-row">
+				<form>
+					<div class="form-group">
+						<textarea rows="6" cols="35" type="text" class="form-control" placeholder="Enter Comment"></textarea>
+					</div>
+				</form>
+			</div>
+
+			<div class="d-flex flex-row my-2 justify-content-around">
+				<div class="btn-group">
+					<button class="btn btn-dark" style="width:80px;">Submit</button>
+					<button class="btn btn-dark" style="width:80px;" (click)="closeReply()">Close</button>
+				</div>
+			</div>
+		</div>
+
 </div>
+
+
+
 
 <div class="panelTheme card d-none d-sm-block d-md-none m-3" style="min-height: 160px;">
 	<div class="card-body">
 		<div class="d-flex flex-row ">
 			<p class="font-weight-bold">Anonymous</p>
-			<button class="btn btn-dark ml-auto"><i class="fa fa-reply" aria-hidden="true">  Reply  </i></button>
+			<button class="btn btn-dark ml-auto"><i class="fa fa-reply" aria-hidden="true" (click)="openReply()">  Reply  </i></button>
 		</div>
 		<div class="d-flex flex-row mr-4 my-2" style="overflow: hidden; text-overflow: ellipsis; word-break: break-all;">
 			<p>{{commentDetails.characterText}}</p>
@@ -56,8 +76,32 @@
 				<button class="btn btn-dark">Report</button>
 			</div>
 		</div>
+
+
+		<div *ngIf="replyOpen" class="d-flex flex-column mt-1 ml-2">
+
+			<div class="d-flex flex-row">
+				<form>
+					<div class="form-group">
+						<textarea rows="6" cols="50" type="text" class="form-control" placeholder="Enter Comment"></textarea>
+					</div>
+				</form>
+			</div>
+
+			<div class="d-flex flex-row">
+				<div class="btn-group">
+					<button class="btn btn-dark" style="width:80px;">Submit</button>
+					<button class="btn btn-dark" style="width:80px;" (click)="closeReply()">Close</button>
+				</div>
+			</div>
+		</div>
+
 	</div>
+
+
 </div>
+
+
 
 
 
@@ -70,7 +114,7 @@
 					<div class="btn-group mr-3">
 						<button class="btn btn-dark">Report</button>
 						<button class="btn btn-dark">PM User</button>
-						<button class="btn btn-dark"><i class="fa fa-reply" aria-hidden="true">  Reply  </i></button>
+						<button class="btn btn-dark" (click)="openReply()"><i class="fa fa-reply" aria-hidden="true">  Reply  </i></button>
 					</div>
 				</div>
 
@@ -96,6 +140,24 @@
 					<i class="fa fa-thumbs-o-down fa-1x" aria-hidden="true">  &nbsp;{{commentDetails.commentDownvotes}}  </i>
 				</button>
 
+			</div>
+		</div>
+		
+		<div *ngIf="replyOpen" class="d-flex flex-column mt-5 ml-2">
+
+			<div class="d-flex flex-row">
+				<form>
+					<div class="form-group">
+						<textarea rows="6" cols="50" type="text" class="form-control" placeholder="Enter Comment"></textarea>
+					</div>
+				</form>
+			</div>
+
+			<div class="d-flex flex-row">
+				<div class="btn-group">
+					<button class="btn btn-dark" style="width:80px;">Submit</button>
+					<button class="btn btn-dark" style="width:80px;" (click)="closeReply()">Close</button>
+				</div>
 			</div>
 		</div>
 

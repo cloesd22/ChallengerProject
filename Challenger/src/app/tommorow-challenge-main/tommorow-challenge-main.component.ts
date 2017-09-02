@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import {challenge} from '../models/challenge.model';
 import {challengeListing} from '../models/challengeListing.model';
+
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
 
 
 
@@ -11,12 +14,12 @@ import {challengeListing} from '../models/challengeListing.model';
 })
 export class TommorowChallengeMainComponent implements OnInit {
 
+	public modalRef: BsModalRef;
+	challengeListing:challenge[];
 
-		challengeListing:challenge[];
+	constructor(private chlnglst:challengeListing, private modalService: BsModalService) { }
 
-  constructor(private chlnglst:challengeListing) { }
-
-  ngOnInit() {
+	ngOnInit() {
 
 
 		this.chlnglst.getList();
@@ -27,8 +30,14 @@ export class TommorowChallengeMainComponent implements OnInit {
 
 		this.chlnglst.ChallengeListLink.subscribe((data:challenge[])=>{
 			
-		this.challengeListing = data;})
+			this.challengeListing = data;})
 	}
+
+
+  public openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template);
+    console.log("bleh");
+  }
 
 
 }

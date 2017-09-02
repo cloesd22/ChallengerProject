@@ -11,6 +11,8 @@ export class CommentPanelComponent implements OnInit {
   @ViewChild('moreOptionsDropdown') moreOptionsDropdown:ElementRef;
   //more options dropdown visible on mobile devices only (xs)
 
+  replyOpen:boolean = false;
+
   @Input('commentDetails') commentDetails;
 
   //use comment ID to control which dropdown menu opens!
@@ -29,6 +31,12 @@ export class CommentPanelComponent implements OnInit {
   	this.coms.emitPackage("commentDropdown"+this.commentDetails.commentID);
   }
 
+  openReply(){
+  	this.replyOpen = true;
+  }
 
+  closeReply(){
+  	this.replyOpen = false;
+  }
 
 }

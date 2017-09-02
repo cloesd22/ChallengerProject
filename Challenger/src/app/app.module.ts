@@ -20,8 +20,8 @@ import { HamburgerOnClickDirective } from './directives/uiDirectives/hamburger-o
 import {StandardComsService} from './services/ui/standard-coms.service';
 import {commentListing} from './models/comment-listing.model';
 import { DropdownOnClickDirective } from './directives/uiDirectives/dropdown-on-click.directive';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { PopoverModule } from 'ngx-bootstrap/popover';
+import { ModalModule } from 'ngx-bootstrap';
 
 const pathMap: Routes=
 [
@@ -63,7 +63,7 @@ const pathMap: Routes=
     HttpModule,
     RouterModule.forRoot(pathMap),
     PopoverModule.forRoot(),
-    BsDropdownModule.forRoot(),
+    ModalModule.forRoot(),
 
   ],
   providers: [challengeListing,StandardComsService,commentListing],

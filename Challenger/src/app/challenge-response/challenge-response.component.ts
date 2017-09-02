@@ -1,6 +1,8 @@
 import { Component, OnInit,Input } from '@angular/core';
 import {challenge} from '../models/challenge.model';
 
+
+
 @Component({
   selector: 'app-challenge-response',
   templateUrl: './challenge-response.component.html',
@@ -11,7 +13,8 @@ export class ChallengeResponseComponent implements OnInit {
 	@Input('channelInput') panelChallenge:challenge;
   panelid:string;
 	
-	
+
+
   constructor() { }
 
   ngOnInit() {
