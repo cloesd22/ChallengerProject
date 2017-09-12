@@ -144,21 +144,22 @@
 		</div>
 		
 		<div *ngIf="replyOpen" class="d-flex flex-column mt-5 ml-2">
-
+			<form [formGroup]="newCommentForm" (ngSubmit)="onCommentSubmit()">
 			<div class="d-flex flex-row">
-				<form>
+			
 					<div class="form-group">
-						<textarea rows="6" cols="50" type="text" class="form-control" placeholder="Enter Comment"></textarea>
+						<textarea rows="6" formControlName="commentText" cols="50" type="text" class="form-control" placeholder="Enter Comment"></textarea>
 					</div>
-				</form>
+			
 			</div>
 
 			<div class="d-flex flex-row">
 				<div class="btn-group">
-					<button class="btn btn-dark" style="width:80px;">Submit</button>
+					<button class="btn btn-dark" [disabled]="newCommentForm.valid==false" style="width:80px;">Submit</button>
 					<button class="btn btn-dark" style="width:80px;" (click)="closeReply()">Close</button>
 				</div>
 			</div>
+			</form>
 		</div>
 
 	</div>

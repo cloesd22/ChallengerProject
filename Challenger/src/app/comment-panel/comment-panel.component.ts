@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef,Input } from '@angular/core';
 import {StandardComsService} from '../services/ui/standard-coms.service';
+import {FormControl, FormGroup, NgForm, Validators} from '@angular/forms'
 
 @Component({
   selector: 'app-comment-panel',
@@ -12,6 +13,7 @@ export class CommentPanelComponent implements OnInit {
   //more options dropdown visible on mobile devices only (xs)
 
   replyOpen:boolean = false;
+  newCommentForm: FormGroup;
 
   @Input('commentDetails') commentDetails;
 
@@ -23,7 +25,15 @@ export class CommentPanelComponent implements OnInit {
   constructor(private coms:StandardComsService) { }
 
   ngOnInit() {
+    this.forminit();
+  }
 
+
+  forminit(){
+
+    this.newCommentForm = new FormGroup({
+      'commentText' : new FormControl(null,Validators.required)
+    });
   }
 
 
@@ -37,6 +47,11 @@ export class CommentPanelComponent implements OnInit {
 
   closeReply(){
   	this.replyOpen = false;
+  }
+
+  onCommentSubmit(){
+    console.log(this.newCommentForm);
+    this.closeReply();
   }
 
 }

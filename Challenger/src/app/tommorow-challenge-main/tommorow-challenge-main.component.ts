@@ -4,6 +4,7 @@ import {challengeListing} from '../models/challengeListing.model';
 
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
+import {FormControl, FormGroup, NgForm, Validators} from '@angular/forms'
 
 
 
@@ -17,27 +18,100 @@ export class TommorowChallengeMainComponent implements OnInit {
 	public modalRef: BsModalRef;
 	challengeListing:challenge[];
 
+	newChallengeForm: FormGroup;
+
+	imageuploadData = null;
+
 	constructor(private chlnglst:challengeListing, private modalService: BsModalService) { }
 
 	ngOnInit() {
 
 
 		this.chlnglst.getList();
+
+	
 		
 
 		this.challengeListing = this.chlnglst.challengeList;
-
+		
+		console.log(this.challengeListing);
 
 		this.chlnglst.ChallengeListLink.subscribe((data:challenge[])=>{
 			
 			this.challengeListing = data;})
+
+		this.formInit();
+	}
+
+
+	formInit(){
+		this.newChallengeForm = new FormGroup({
+			'title':new FormControl(null,Validators.required),
+			'challengeText':new FormControl(null,Validators.required),
+		})
 	}
 
 
   public openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template);
-    console.log("bleh");
   }
+
+  imageUploaded(imagedata){
+  	console.log(imagedata.file);
+  	this.imageuploadData = imagedata.file;
+  }
+
+  onNewChallenge(){
+
+  	if (this.imageuploadData ==null)
+  	{
+  		//set default image file.
+  	}
+
+  	console.log({"data":this.newChallengeForm,"imgvalue":this.imageuploadData})
+  }
+
+
+  sortByTop(){
+  	this.challengeListing = this.challengeListing.sort((a,b)=>{
+
+  		if((a.getchallengeUpvote() - a.getchallengeDownvote())>(b.getchallengeUpvote() - b.getchallengeDownvote())){
+  			return 1;
+  		}else{
+  			return -1;
+  		}
+
+  	})
+  	console.log(this.challengeListing);
+
+  }
+
+  sortByRecent(){
+  	this.challengeListing = this.challengeListing.sort((a,b)=>{
+
+  		if(a.getchallengeDate() > b.getchallengeDate()){
+  			return 1;
+  		}else{
+  			return -1;
+  		}
+
+  	})
+  	console.log(this.challengeListing);
+  }
+
+   sortByHated(){
+  	this.challengeListing = this.challengeListing.sort((a,b)=>{
+
+  		if((a.getchallengeUpvote() - a.getchallengeDownvote())>(b.getchallengeUpvote() - b.getchallengeDownvote())){
+  			return -1;
+  		}else{
+  			return 1;
+  		}
+
+  	})
+  	console.log(this.challengeListing);
+  }
+
 
 
 }

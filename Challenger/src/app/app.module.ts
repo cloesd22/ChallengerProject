@@ -22,6 +22,9 @@ import {commentListing} from './models/comment-listing.model';
 import { DropdownOnClickDirective } from './directives/uiDirectives/dropdown-on-click.directive';
 import { PopoverModule } from 'ngx-bootstrap/popover';
 import { ModalModule } from 'ngx-bootstrap';
+import {ImageUploadModule} from 'angular2-image-upload'
+import {ReactiveFormsModule} from '@angular/forms';
+
 
 const pathMap: Routes=
 [
@@ -55,6 +58,7 @@ const pathMap: Routes=
     CommentPanelComponent,
     HamburgerOnClickDirective,
     DropdownOnClickDirective,
+
   ],
 
   imports: [
@@ -64,7 +68,8 @@ const pathMap: Routes=
     RouterModule.forRoot(pathMap),
     PopoverModule.forRoot(),
     ModalModule.forRoot(),
-
+    ImageUploadModule.forRoot(),
+    ReactiveFormsModule
   ],
   providers: [challengeListing,StandardComsService,commentListing],
   bootstrap: [AppComponent]

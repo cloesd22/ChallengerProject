@@ -26,6 +26,18 @@ export class challenge{
 		return this.challengeID;
 	}
 
+	getchallengeUpvote(){
+		return this.challengeUpvote;
+	}
+
+	getchallengeDownvote(){
+		return this.challengeDownvote;
+	}
+
+	getchallengeDate(){
+		return this.challengeDate;
+	}
+
 	addUpvote(){
 		this.challengeUpvote++;
 	}

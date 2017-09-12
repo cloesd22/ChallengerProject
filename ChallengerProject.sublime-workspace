@@ -299,7 +299,7 @@
 			"file": "Challenger/src/app/tommorow-challenge-main/tommorow-challenge-main.component.html",
 			"settings":
 			{
-				"buffer_size": 1283,
+				"buffer_size": 4200,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -354,16 +354,25 @@
 			"file": "Challenger/src/app/tommorow-challenge-main/tommorow-challenge-main.component.ts",
 			"settings":
 			{
-				"buffer_size": 718,
+				"buffer_size": 1030,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Challenger/src/app/tommorow-challenge-main/tommorow-challenge-main.component.css",
+			"settings":
+			{
+				"buffer_size": 429,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "Challenger/src/app/app.module.ts",
 			"settings":
 			{
-				"buffer_size": 2578,
+				"buffer_size": 3251,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -372,7 +381,7 @@
 			"file": "Challenger/src/app/models/challenge.model.ts",
 			"settings":
 			{
-				"buffer_size": 974,
+				"buffer_size": 709,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -415,7 +424,7 @@
 			"file": "Challenger/src/app/models/challengeListing.model.ts",
 			"settings":
 			{
-				"buffer_size": 2861,
+				"buffer_size": 2985,
 				"encoding": "UTF-8",
 				"line_ending": "Windows",
 				"name": "challengeListing.model.ts"
@@ -425,7 +434,7 @@
 			"file": "Challenger/src/app/today-challenge-main/today-challenge-main.component.html",
 			"settings":
 			{
-				"buffer_size": 1940,
+				"buffer_size": 4230,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -434,7 +443,7 @@
 			"file": "Challenger/src/app/comment-panel/comment-panel.component.ts",
 			"settings":
 			{
-				"buffer_size": 296,
+				"buffer_size": 1219,
 				"line_ending": "Unix"
 			}
 		},
@@ -442,16 +451,8 @@
 			"file": "Challenger/src/app/challenge-response/challenge-response.component.html",
 			"settings":
 			{
-				"buffer_size": 1641,
+				"buffer_size": 2944,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Challenger/src/polyfills.ts",
-			"settings":
-			{
-				"buffer_size": 2480,
 				"line_ending": "Unix"
 			}
 		},
@@ -467,7 +468,7 @@
 			"file": "Challenger/src/app/comment-panel/comment-panel.component.html",
 			"settings":
 			{
-				"buffer_size": 1090,
+				"buffer_size": 5454,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -485,7 +486,7 @@
 			"file": "Challenger/src/app/app.component.html",
 			"settings":
 			{
-				"buffer_size": 954,
+				"buffer_size": 1372,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -522,7 +523,7 @@
 			"file": "Challenger/src/app/today-challenge-main/today-challenge-main.component.ts",
 			"settings":
 			{
-				"buffer_size": 509,
+				"buffer_size": 1268,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -558,7 +559,7 @@
 			"file": "Challenger/src/styles.css",
 			"settings":
 			{
-				"buffer_size": 1248,
+				"buffer_size": 1427,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -607,7 +608,10 @@
 		"/E/Challenger/Challenger/src",
 		"/E/Challenger/Challenger/src/app",
 		"/E/Challenger/Challenger/src/app/comment-panel",
-		"/E/Challenger/Challenger/src/app/today-challenge-main"
+		"/E/Challenger/Challenger/src/app/models",
+		"/E/Challenger/Challenger/src/app/services",
+		"/E/Challenger/Challenger/src/app/today-challenge-main",
+		"/E/Challenger/Challenger/src/app/tommorow-challenge-main"
 	],
 	"file_history":
 	[
@@ -715,6 +719,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			">",
 			"\n\t",
 			"7px",
 			">\n",
@@ -742,7 +747,7 @@
 	"groups":
 	[
 		{
-			"selected": 16,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -751,15 +756,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1283,
+						"buffer_size": 4200,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1196,
-								1196
+								710,
+								710
 							]
 						],
 						"settings":
@@ -774,10 +779,10 @@
 							}
 						},
 						"translation.x": 0.0,
-						"translation.y": 114.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -812,7 +817,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
@@ -828,8 +833,8 @@
 						"selection":
 						[
 							[
-								222,
-								222
+								0,
+								0
 							]
 						],
 						"settings":
@@ -902,7 +907,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
@@ -930,7 +935,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
@@ -939,15 +944,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 718,
+						"buffer_size": 1030,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								718,
-								718
+								750,
+								750
 							]
 						],
 						"settings":
@@ -959,24 +964,58 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 7,
-					"file": "Challenger/src/app/app.module.ts",
+					"file": "Challenger/src/app/tommorow-challenge-main/tommorow-challenge-main.component.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2578,
+						"buffer_size": 429,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1449,
-								1449
+								15,
+								15
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "Challenger/src/app/app.module.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3251,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2724,
+								2724
 							]
 						],
 						"settings":
@@ -993,27 +1032,27 @@
 							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 179.0,
+						"translation.y": 498.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
 					"file": "Challenger/src/app/models/challenge.model.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 974,
+						"buffer_size": 709,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								255,
-								255
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1032,11 +1071,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 10,
 					"file": "Challenger/src/app/page-not-found-component/page-not-found-component.component.html",
 					"semi_transient": false,
 					"settings":
@@ -1064,7 +1103,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 11,
 					"file": "Challenger/src/app/report-panel/report-panel.component.ts",
 					"semi_transient": false,
 					"settings":
@@ -1093,7 +1132,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 12,
 					"semi_transient": false,
 					"settings":
 					{
@@ -1120,7 +1159,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 13,
 					"file": "Challenger/src/app/report-panel/report-panel.component.html",
 					"semi_transient": false,
 					"settings":
@@ -1149,20 +1188,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 14,
 					"file": "Challenger/src/app/models/challengeListing.model.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2861,
+						"buffer_size": 2985,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2861,
-								2861
+								2944,
+								2944
 							]
 						],
 						"settings":
@@ -1182,24 +1221,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 15,
 					"file": "Challenger/src/app/today-challenge-main/today-challenge-main.component.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1940,
+						"buffer_size": 4230,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1894,
-								1894
+								3314,
+								3314
 							]
 						],
 						"settings":
@@ -1208,56 +1247,58 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 456.0,
+						"translation.y": 1924.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 16,
 					"file": "Challenger/src/app/comment-panel/comment-panel.component.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 296,
+						"buffer_size": 1219,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								78,
-								95
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
 							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 17,
 					"file": "Challenger/src/app/challenge-response/challenge-response.component.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1641,
+						"buffer_size": 2944,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1165,
-								1165
+								928,
+								928
 							]
 						],
 						"settings":
@@ -1272,39 +1313,10 @@
 							}
 						},
 						"translation.x": 0.0,
-						"translation.y": 228.0,
+						"translation.y": 198.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "Challenger/src/polyfills.ts",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 2480,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
@@ -1331,10 +1343,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2280.0,
+						"translation.y": 2022.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -1343,15 +1355,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1090,
+						"buffer_size": 5454,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1090,
-								0
+								4905,
+								5436
 							]
 						],
 						"settings":
@@ -1360,10 +1372,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2375.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1393,7 +1405,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
@@ -1402,15 +1414,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 954,
+						"buffer_size": 1372,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								679,
-								679
+								1372,
+								1372
 							]
 						],
 						"settings":
@@ -1423,7 +1435,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -1453,7 +1465,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
@@ -1525,15 +1537,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 509,
+						"buffer_size": 1268,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								428,
-								428
+								473,
+								473
 							]
 						],
 						"settings":
@@ -1545,7 +1557,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -1646,21 +1658,21 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1248,
+						"buffer_size": 1427,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								346,
-								346
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true,
 							"typescript_plugin_format_options":
 							{
@@ -1670,7 +1682,7 @@
 							}
 						},
 						"translation.x": 0.0,
-						"translation.y": 250.0,
+						"translation.y": 218.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,

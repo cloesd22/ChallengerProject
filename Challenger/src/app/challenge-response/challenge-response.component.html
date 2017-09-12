@@ -76,11 +76,11 @@
 		</div>	
 
 		<div class="d-flex flex-column justify-content-around pr-3">
-			<button class="btn btn-dark btn-lg">
+			<button class="btn btn-dark btn-lg" (click)="upvote()">
 				<i class="fa fa-thumbs-o-up fa-1x" aria-hidden="true">	&nbsp;{{panelChallenge.challengeUpvote}}  </i>
 			</button>	
 
-			<button class="btn btn-dark btn-lg">
+			<button class="btn btn-dark btn-lg" (click)="downvote()">
 				<i class="fa fa-thumbs-o-down fa-1x" aria-hidden="true">	&nbsp;{{panelChallenge.challengeDownvote}}  </i>
 			</button>
 		</div>

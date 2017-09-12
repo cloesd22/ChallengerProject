@@ -1,3 +1,39 @@
 .modal-content{
-	border-radius: 4px;
+	
+	background-color: #222;
+    border-color: #222;
+    border-radius: 0;
 }
+
+
+.modal-header{
+
+    border-bottom: 0px !important;
+}
+
+.modal-backdrop{
+	background-color: red;
+}
+.customClass {
+    background-color: #D21C1C;
+    border-radius: 5px;
+    margin:auto;
+    width: 50%;
+}
+
+.customClass .img-ul-upload {
+    background-color: #222 !important;
+}
+
+.customClass .img-ul-clear {
+    background-color: #222 !important;
+}
+
+.customClass .img-ul-drag-box-msg {
+    color: purple !important;
+}
+
+.customClass .img-ul-container {
+    background-color: #222 !important;
+}
+

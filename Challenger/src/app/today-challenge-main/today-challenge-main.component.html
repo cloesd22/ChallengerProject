@@ -24,6 +24,7 @@
 								<button class="btn btn-dark m-1">Top</button>
 								<button class="btn btn-dark m-1">Recent</button>
 								<button class="btn btn-dark m-1">Hated</button>
+								<button class="btn btn-dark" (click)="openModal(template)"><i class="fa fa-plus" aria-hidden="true"></i></button>
 							</div>
 						</div>
 
@@ -47,6 +48,7 @@
 								<button class="btn btn-dark">Top</button>
 								<button class="btn btn-dark">Recent</button>
 								<button class="btn btn-dark">Hated</button>
+								<button class="btn btn-dark" (click)="openModal(template)"><i class="fa fa-plus" aria-hidden="true"></i></button>
 								</div>
 							</div>
 						</div>
@@ -71,6 +73,7 @@
 								<button class="btn btn-dark">Top</button>
 								<button class="btn btn-dark">Recent</button>
 								<button class="btn btn-dark">Hated</button>
+
 								</div>
 							</div>
 						</div>
@@ -79,7 +82,7 @@
 							<div class="d-flex flex-row">
 								<div class="btn-group">
 								<input type="text" class="form-control" placeholder="Search">
-								<button class="btn btn-dark">Search</button>
+								<button class="btn btn-dark">Search</button><button class="btn btn-dark" (click)="openModal(template)"><i class="fa fa-plus" aria-hidden="true"></i></button>
 								</div>
 							</div>
 						</div>
@@ -101,3 +104,35 @@
 		</div>
 	</div>
 </div>
+
+
+<ng-template #template>
+	<div class="modal-header panelTheme" style="color: white; ">
+		<h4 class="modal-title pull-left ">New Comment</h4>
+		<button type="button" class="close pull-right" style="color:white;" aria-label="Close" (click)="modalRef.hide()">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+
+	<div class="modal-body panelTheme">
+		<div class="d-flex flex-column mt-5 ml-2">
+			<form [formGroup]="newCommentForm" (ngSubmit)="onCommentSubmit()">
+				<div class="d-flex flex-row">
+
+					<div class="form-group">
+						<textarea formControlName="commentText" rows="6" cols="50" type="text" class="form-control" placeholder="Enter Comment"></textarea>
+					</div>
+
+				</div>
+
+				<div class="d-flex flex-row">
+					<div class="btn-group">
+						<button class="btn btn-dark" [disabled]="newCommentForm.valid==false" type="Submit" style="width:80px;">Submit</button>
+						<button class="btn btn-dark" style="width:80px;" (click)="modalRef.hide()">Close</button>
+					</div>
+				</div>
+
+			</form>
+		</div>
+	</div>
+</ng-template>
