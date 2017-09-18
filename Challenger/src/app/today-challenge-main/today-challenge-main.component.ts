@@ -1,6 +1,6 @@
 import { Component, OnInit,TemplateRef } from '@angular/core';
-import {challenge} from '../models/challenge.model';
 import {challengeListing} from '../models/challengeListing.model';
+import {challenge} from '../models/challenge.model';
 import {comment} from '../models/comment.model';
 import {commentListing} from '../models/comment-listing.model';
 import { BsModalService } from 'ngx-bootstrap/modal';
@@ -14,29 +14,27 @@ import {FormControl, FormGroup, NgForm, Validators} from '@angular/forms'
 })
 export class TodayChallengeMainComponent implements OnInit {
 
+
+  formloaded:boolean = false;
 	todaysChallenge:challenge;
 	attachedCommentTree:comment[];
 	public modalRef: BsModalRef;
-
 	newCommentForm: FormGroup;
-
 
   constructor(private chlnglst:challengeListing, private cmtLst:commentListing, private modalService: BsModalService) { }
 
   ngOnInit() {
-	this.todaysChallenge = this.chlnglst.getFromListByID("C1")[0];
+    this.chlnglst.fillList().then(()=>{
+      this.todaysChallenge = this.chlnglst.getFromListByID("C1")[0];
+     this.cmtLst.FindCommentbyParentID(this.todaysChallenge.getchallengeID());
 
-	this.cmtLst.commentService.subscribe((data)=>{
-		this.attachedCommentTree = data;
-	})
+      this.formloaded = true;
+    })
 
-	this.cmtLst.FindCommentbyParentID(this.todaysChallenge.getchallengeID());
-
-	this.forminit()
-
-	console.log(this.attachedCommentTree);
-
-
+    this.cmtLst.commentService.subscribe((data)=>{
+      this.attachedCommentTree = data;
+    })
+    this.forminit()
   }
 
 

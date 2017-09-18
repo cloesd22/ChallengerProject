@@ -8,8 +8,10 @@
 			</div>
 		</div>
 	</div>
-
-		<app-challenge-response [channelInput]="todaysChallenge"></app-challenge-response>
+		
+		<div *ngIf="formloaded">
+			<app-challenge-response [channelInput]="todaysChallenge"></app-challenge-response>
+		</div>
 
 	<div class="row">
 		<div class="container">
@@ -89,14 +91,15 @@
 					  </div> 
 					</nav>
 					
-					<div *ngIf="attachedCommentTree.length == 0" class="p-5">
-						<h3 class="display-4 text-center text-justify">No comments found.</h3>
-					</div>
+					<div *ngIf="formloaded">
+						<div *ngIf="attachedCommentTree.length == 0" class="p-5">
+							<h3 class="display-4 text-center text-justify">No comments found.</h3>
+						</div>
 
-					<div *ngFor="let item of attachedCommentTree">
-						<app-comment-panel [commentDetails]="item"></app-comment-panel>
+						<div *ngFor="let item of attachedCommentTree">
+							<app-comment-panel [commentDetails]="item"></app-comment-panel>
+						</div>
 					</div>
-
 						
 
 				</div>

@@ -2,6 +2,7 @@
 export class challenge{
 
 	public challengeID : string;
+	private userID: string;
 	private challengeHeading :  string;
 	private challengeText: string;
 	private challengeDate: Date;
@@ -11,12 +12,13 @@ export class challenge{
 	private report:number=0;
 
 
-	constructor(id,heading,text,date,imgurl){
-		this.challengeID = id;
-		this.challengeHeading=heading;
-		this.challengeText=text;
-		this.challengeDate=date;
-		this.challengeImgUrl=imgurl;
+	constructor(challengeData : {id,uid,heading,text,date,imgurl}){
+		this.challengeID = challengeData.id;
+		this.userID = challengeData.uid;
+		this.challengeHeading=challengeData.heading;
+		this.challengeText=challengeData.text;
+		this.challengeDate=challengeData.date;
+		this.challengeImgUrl=challengeData.imgurl;
 		this.challengeUpvote=0;
 		this.challengeDownvote=0;
 

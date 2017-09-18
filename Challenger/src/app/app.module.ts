@@ -24,6 +24,7 @@ import { PopoverModule } from 'ngx-bootstrap/popover';
 import { ModalModule } from 'ngx-bootstrap';
 import {ImageUploadModule} from 'angular2-image-upload'
 import {ReactiveFormsModule} from '@angular/forms';
+import {FirebaseCommService} from './services/httpComm/firebase-comm.service';
 
 
 const pathMap: Routes=
@@ -71,7 +72,7 @@ const pathMap: Routes=
     ImageUploadModule.forRoot(),
     ReactiveFormsModule
   ],
-  providers: [challengeListing,StandardComsService,commentListing],
+  providers: [FirebaseCommService,challengeListing,StandardComsService,commentListing],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

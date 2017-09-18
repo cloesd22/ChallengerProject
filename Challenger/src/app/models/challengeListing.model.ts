@@ -1,26 +1,86 @@
 import {challenge} from './challenge.model';
+import {Injectable} from '@angular/core'
 import {Subject} from 'rxjs/Subject';
+import {Response,Request} from '@angular/http';
+import {FirebaseCommService} from '../services/httpComm/firebase-comm.service';
 
+@Injectable()
 export class challengeListing{
 	//test class simulating a database providing data until firebase setup
 
-	challengeList:challenge[] = [
-	new challenge('C1',"TestChallenge1","It cost 82 crore and was built in 11 months which is a record for the construction of an indoor stadium of international standard. With a 131-metre sheet, the stadium is Asia's first stadium which has the longest single-sheet roof.",new Date("October 13, 2012 11:13:00"),"https://static.pexels.com/photos/34950/pexels-photo.jpg"),
-	new challenge('C2',"TestChallenge2",". Sed nec velit justo. Praesent sollicitudin molestie velit eget rutrum. Fusce sed condimentum nisl. Donec quis urna molestie, convallis velit et, eleifend leo. Donec hendrerit massa nec elit sollicitudin facilisis. Ut porta dictum tortor, vel sodales ligula aliquam ut. Suspendisse commodo egestas iaculis. Phasellus mag",new Date("October 13, 2011 11:13:00"),"https://static.pexels.com/photos/56875/tree-dawn-nature-bucovina-56875.jpeg"),
-	new challenge('C3',"TestChallenge3","tis quam, et ullamcorper lacus. In porta eros ex, in feugiat odio ornare id. Pellentesque dignissim efficitur enim. Pellentesque tristique, orci ut blandit finibus, turpis ipsum varius eros, ut feugiat orci mauris non ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phase",new Date("October 13, 2016 11:13:00"),"http://maxpixel.freegreatpicture.com/static/photo/1x/Parachute-Sky-Diving-Diving-Sport-Sky-Chatham-235553.jpg"),
-	new challenge('C4',"TestChallenge4","tique lectus at orci gravida venenatis. Nulla quis maximus neque. Morbi finibus luctus vulputate. Mauris eget purus euismod, posuere erat ac, gravida metus. Ut feug",new Date("October 13, 2014 11:13:00"),"https://static.pexels.com/photos/56875/tree-dawn-nature-bucovina-56875.jpeg"),
-	new challenge('C5',"TestChallenge5"," mattis. Nullam purus lectus, facilisis sed efficitur quis, finibus blandit libero. Praesent vitae venenatis sem. In id placerat ante. Aenean tempor urna eu metus auctor, a hendrerit erat luctus. Cras commodo justo quis sagittis semper. Nam ac volutpat arcu. Ut dignissim augue nec nibh semper, et gravida orci elementum. Ut felis nibh, pretium at lobortis sit amet, auctor et risus. Pellentesque ut lobortis magna. Aliquam erat volutpat. Nam ",new Date("October 13, 2014 11:13:00"),"http://maxpixel.freegreatpicture.com/static/photo/1x/Lokken-North-Sea-Sea-Fishing-Boat-Denmark-Beach-49523.jpg")];
 
+
+	challengeList:challenge[] = [];
+
+/*		challengeList:challenge[] = 
+	[	new challenge({id:'C1',
+		uid:2,
+		heading:"TestChallenge1",
+		text:"y five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. I",
+		date:new Date("October 1, 2016 11:13:00"),
+		imgurl:"https://upload.wikimedia.org/wikipedia/commons/8/80/Knut_IMG_8095.jpg"}),
+	new challenge({id:'C2',
+		uid:2,
+		heading:"TestChallenge2",
+		text:" of a page when looking at its layout. The point of using Lorem Ipsum is that it has a mor",
+		date:new Date("October 12, 2016 11:13:00"),
+		imgurl:"https://static.pexels.com/photos/34950/pexels-photo.jpg"}),
+	new challenge({id:'C3',
+		uid:2,
+		heading:"TestChallenge3",
+		text:" be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the In",
+		date:new Date("October 13, 2016 11:13:00"),
+		imgurl:"https://blogs.adelaide.edu.au/research/files/2016/03/feat-img-gravity-speaks.jpg"}),
+	new challenge({id:'C4',
+		uid:2,
+		heading:"TestChallenge4",
+		text:"f Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.1",
+		date:new Date("October 8, 2016 11:13:00"),
+		imgurl:"http://wac.2f9ad.chicdn.net/802F9AD/u/joyent.wme/public/wme/assets/ec050984-7b81-11e6-96e0-8905cd656caf.jpg?v=55"}),
+	new challenge({id:'C5',
+		uid:2,
+		heading:"TestChallenge5",
+		text:"m is simply dummy text of the printing and typesetting industry. Lorem Ips",
+		date:new Date("October 3, 2016 11:13:00"),
+		imgurl:"https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg"})
+	];*/
+	
 	ChallengeListLink = new Subject();
 
-	constructor(){
+	constructor(private fbComm:FirebaseCommService){
 
 
 	}
 
-	fillList(){
-		//pulls challenge data from backend
+
+	fillList = ()=>{
+		return new Promise((resolve,reject)=>{
+			this.fbComm.getdata("challengetbl").subscribe((data:Response)=>{
+				var resp  = data.json();
+				
+				resp.forEach((data=>{
+					this.challengeList.push(new challenge({id:data.challengeID,
+						uid:data.userID,
+						heading:data.challengeHeading,
+						text:data.challengeText,
+						date:data.challengeDate,
+						imgurl:data.challengeImgUrl}))
 		
+				}))
+	
+				resolve();
+			})
+		})
+	}
+	challengeData : {id,uid,heading,text,date,imgurl}
+
+	sampleFill(){
+		//testing function to populate remote challenge table with sample data
+		this.fbComm.pushMass(this.challengeList,"challengetbl").subscribe((data)=>{
+			console.log('data');
+			return data;
+
+		});
 	}
 
 	getList(){
@@ -32,7 +92,7 @@ export class challengeListing{
 
 	}
 
-	getFromListByID(id:string){
+	getFromListByID(id:string):challenge[]{
 
 		var challengesender = this.challengeList.filter((challengetoReturn)=>{
 			return challengetoReturn.challengeID ==id;		

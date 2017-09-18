@@ -1,7 +1,6 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import {challenge} from '../models/challenge.model';
 import {challengeListing} from '../models/challengeListing.model';
-
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
 import {FormControl, FormGroup, NgForm, Validators} from '@angular/forms'
@@ -18,6 +17,8 @@ export class TommorowChallengeMainComponent implements OnInit {
 	public modalRef: BsModalRef;
 	challengeListing:challenge[];
 
+  dataloaded:boolean = false;
+
 	newChallengeForm: FormGroup;
 
 	imageuploadData = null;
@@ -26,19 +27,17 @@ export class TommorowChallengeMainComponent implements OnInit {
 
 	ngOnInit() {
 
+    this.chlnglst.fillList().then(()=>{
+      this.challengeListing = this.chlnglst.challengeList;
 
-		this.chlnglst.getList();
+      this.chlnglst.ChallengeListLink.subscribe((data:challenge[])=>{
 
-	
+       this.challengeListing = data;})
+
+      this.dataloaded=true;
+       
+    });
 		
-
-		this.challengeListing = this.chlnglst.challengeList;
-		
-		console.log(this.challengeListing);
-
-		this.chlnglst.ChallengeListLink.subscribe((data:challenge[])=>{
-			
-			this.challengeListing = data;})
 
 		this.formInit();
 	}
@@ -112,6 +111,9 @@ export class TommorowChallengeMainComponent implements OnInit {
   	console.log(this.challengeListing);
   }
 
+  testfuc(){
+    this.chlnglst.sampleFill();
+  }
 
 
 }

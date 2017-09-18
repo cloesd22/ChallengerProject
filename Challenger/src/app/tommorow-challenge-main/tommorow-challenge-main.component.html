@@ -74,11 +74,16 @@
 	</div>
   </div> 
 </nav>
+	<button class="btn btn-success" (click)="testfuc()">HelloMotto</button>
+	<button class="btn btn-success" (click)="testfuc2()">fill</button>
+	
 
-
-	<div *ngFor="let listitem of challengeListing">	
-		<app-challenge-response [channelInput]="listitem"></app-challenge-response>
+	<div *ngIf="dataloaded">
+		<div *ngFor="let listitem of challengeListing">	
+			<app-challenge-response [channelInput]="listitem"></app-challenge-response>
+		</div>
 	</div>
+
 </div>
 
 
@@ -128,7 +133,7 @@
 							</div>
 						</div> -->
 
-					</div>
+						</div>
 
 				</div>
 

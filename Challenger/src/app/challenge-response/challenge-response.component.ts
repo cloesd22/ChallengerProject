@@ -18,7 +18,8 @@ export class ChallengeResponseComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.panelid = this.panelChallenge.getchallengeID();
+
+    this.panelid = this.panelChallenge.challengeID;
 
   }
 
