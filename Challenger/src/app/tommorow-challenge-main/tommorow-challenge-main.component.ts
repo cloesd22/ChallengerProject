@@ -29,10 +29,9 @@ export class TommorowChallengeMainComponent implements OnInit {
 
     this.chlnglst.fillList().then(()=>{
       this.challengeListing = this.chlnglst.challengeList;
-
+      console.log(this.challengeListing);
       this.chlnglst.ChallengeListLink.subscribe((data:challenge[])=>{
-
-       this.challengeListing = data;})
+      this.challengeListing = data;})
 
       this.dataloaded=true;
        

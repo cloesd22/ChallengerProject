@@ -54,6 +54,7 @@ export class challengeListing{
 
 
 	fillList = ()=>{
+		this.challengeList = [];
 		return new Promise((resolve,reject)=>{
 			this.fbComm.getdata("challengetbl").subscribe((data:Response)=>{
 				var resp  = data.json();
