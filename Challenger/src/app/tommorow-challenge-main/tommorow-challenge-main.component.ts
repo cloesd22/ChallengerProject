@@ -27,19 +27,20 @@ export class TommorowChallengeMainComponent implements OnInit {
 
 	ngOnInit() {
 
-    this.chlnglst.fillList().then(()=>{
-      this.challengeListing = this.chlnglst.challengeList;
-      console.log(this.challengeListing);
-      this.chlnglst.ChallengeListLink.subscribe((data:challenge[])=>{
-      this.challengeListing = data;})
-
-      this.dataloaded=true;
-       
-    });
-		
-
+   this.refreshPage()
 		this.formInit();
 	}
+
+  refreshPage(){
+    this.chlnglst.fillList().then(()=>{
+      this.challengeListing = this.chlnglst.challengeList;
+      this.chlnglst.ChallengeListLink.subscribe((data:challenge[])=>{
+        this.challengeListing = data;})
+      this.dataloaded=true;
+
+    });
+
+  }
 
 
 	formInit(){
@@ -59,15 +60,6 @@ export class TommorowChallengeMainComponent implements OnInit {
   	this.imageuploadData = imagedata.file;
   }
 
-  onNewChallenge(){
-
-  	if (this.imageuploadData ==null)
-  	{
-  		//set default image file.
-  	}
-
-  	console.log({"data":this.newChallengeForm,"imgvalue":this.imageuploadData})
-  }
 
 
   sortByTop(){
@@ -110,9 +102,48 @@ export class TommorowChallengeMainComponent implements OnInit {
   	console.log(this.challengeListing);
   }
 
-  testfuc(){
-    this.chlnglst.sampleFill();
+
+  SubmitChallenge(){
+
+    var challengeID = "CX";
+    var userID = "UX";
+    var date = Date.now();
+    var imgurl = "https://unsplash.it/200/300/?random";
+
+    this.chlnglst.getLatestChallengeID().then((result)=>{
+      challengeID = result;
+    })
+
+
+    var newChallenge = new challenge
+    (
+      {
+        id:challengeID,
+        uid:userID,
+        heading:this.newChallengeForm.value.title,
+        text:this.newChallengeForm.value.challengeText,
+        date:date,
+        imgurl:imgurl
+      }
+    )
+
+      this.chlnglst.insertChallenge(newChallenge,
+        ()=>{this.modalRef.hide()},
+        ()=>{this.challengeListing.push(newChallenge)}
+        );  
   }
 
-
 }
+
+
+
+    
+
+   
+
+
+
+  
+
+
+

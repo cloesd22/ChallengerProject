@@ -3,6 +3,7 @@ import {Injectable} from '@angular/core'
 import {Subject} from 'rxjs/Subject';
 import {Response,Request} from '@angular/http';
 import {FirebaseCommService} from '../services/httpComm/firebase-comm.service';
+import {Observable} from 'rxjs/Observable';
 
 @Injectable()
 export class challengeListing{
@@ -43,64 +44,93 @@ export class challengeListing{
 		text:"m is simply dummy text of the printing and typesetting industry. Lorem Ips",
 		date:new Date("October 3, 2016 11:13:00"),
 		imgurl:"https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg"})
-	];*/
-	
-	ChallengeListLink = new Subject();
+		];*/
 
-	constructor(private fbComm:FirebaseCommService){
+		ChallengeListLink = new Subject();
 
-
-	}
+		constructor(private fbComm:FirebaseCommService){
 
 
-	fillList = ()=>{
-		this.challengeList = [];
-		return new Promise((resolve,reject)=>{
-			this.fbComm.getdata("challengetbl").subscribe((data:Response)=>{
-				var resp  = data.json();
-				
-				resp.forEach((data=>{
-					this.challengeList.push(new challenge({id:data.challengeID,
-						uid:data.userID,
-						heading:data.challengeHeading,
-						text:data.challengeText,
-						date:data.challengeDate,
-						imgurl:data.challengeImgUrl}))
-		
-				}))
-	
-				resolve();
+		}
+
+
+		fillList = ()=>{
+			//refreshes the current challenge list.
+			this.challengeList = [];
+			return new Promise((resolve,reject)=>{
+				this.fbComm.getdata("challengetbl").subscribe((data:Response)=>{
+
+					var resp  = data.json();
+
+					resp.map((element)=>{
+						this.challengeList.push(new challenge({id:element.challengeID,
+							uid:element.userID,
+							heading:element.challengeHeading,
+							text:element.challengeText,
+							date:element.challengeDate,
+							imgurl:element.challengeImgUrl}))
+					})
+
+					resolve();
+				})
 			})
-		})
-	}
-	challengeData : {id,uid,heading,text,date,imgurl}
+		}
 
-	sampleFill(){
-		//testing function to populate remote challenge table with sample data
-		this.fbComm.pushMass(this.challengeList,"challengetbl").subscribe((data)=>{
-			console.log('data');
-			return data;
 
-		});
-	}
+		sampleFill(){
+			//testing function to populate remote challenge table with sample data
+			this.fbComm.pushMass(this.challengeList,"challengetbl").subscribe((data)=>{
+				return data;
+			});
+		}
 
-	getList(){
-		//passes challengeList on request via subject
-		this.ChallengeListLink.next(this.challengeList);
-	}
+		getList(){
+			//passes challengeList on request via subject
+			this.ChallengeListLink.next(this.challengeList);
+		}
 
-	removeFromList(id){
+		getLatestChallengeID():Promise<string>
+		{
 
-	}
+			return (this.fbComm.getLastProperty('challengeID',null,'challengetbl'));
+		}
 
-	getFromListByID(id:string):challenge[]{
 
-		var challengesender = this.challengeList.filter((challengetoReturn)=>{
-			return challengetoReturn.challengeID ==id;		
-		});
+
+		removeFromList(id){
+
+		}
+
+		getFromListByID(id:string):challenge[]{
+
+			var challengesender = this.challengeList.filter((challengetoReturn)=>{
+				return challengetoReturn.challengeID ==id;		
+			});
 			return challengesender;
+		}
+
+		insertChallenge(challenge,callback,callback2){
+			//calls pushIndividual function which returns a promise.
+			//once the promise is resolved, then subscribe to it (because it's a HTTP patch function)
+			this.fbComm.pushIndividual(challenge,'challengetbl').then((data)=>{
+
+				data.subscribe((res)=>{
+					this.getList();
+					callback();
+					callback2();
+
+				})
+			});
+
+
+
+		}
+
+
+
+
+
+
+
+
 	}
-
-
-
-}

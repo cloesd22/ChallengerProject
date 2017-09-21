@@ -2,14 +2,14 @@
 export class challenge{
 
 	public challengeID : string;
-	private userID: string;
-	private challengeHeading :  string;
-	private challengeText: string;
-	private challengeDate: Date;
-	private challengeImgUrl:string;
-	private challengeUpvote:number;
-	private challengeDownvote:number;
-	private report:number=0;
+	public userID: string;
+	public challengeHeading :  string;
+	public challengeText: string;
+	public challengeDate: Date;
+	public challengeImgUrl:string;
+	public challengeUpvote:number;
+	public challengeDownvote:number;
+	public report:number=0;
 
 
 	constructor(challengeData : {id,uid,heading,text,date,imgurl}){
