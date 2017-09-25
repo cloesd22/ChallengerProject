@@ -13,9 +13,6 @@
 	display:flex;
 	align-items: center;
 	justify-content: center;
-
-
-
 }
 
 .bigbuttons{
@@ -72,3 +69,5 @@ fieldset[disabled] .bigbuttons.active {
   color: #222222; 
   background-color: #FFFFFF; 
 }
+
+

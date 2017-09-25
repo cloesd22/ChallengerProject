@@ -1,0 +1,14 @@
+#splashbackground{
+	background:url('/assets/images/photo2.jpeg') no-repeat;
+	background-size:cover;
+	min-height:100%;
+}
+
+.dark-overlay{
+	background-color:rgba(0,0,0,0.4);
+	top:0;
+	left:0;
+	width:100%;
+	padding: 50px;
+	min-height:110%;
+}
