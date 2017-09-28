@@ -146,11 +146,9 @@
 		<div *ngIf="replyOpen" class="d-flex flex-column mt-5 ml-2">
 			<form [formGroup]="newCommentForm" (ngSubmit)="onCommentSubmit()">
 			<div class="d-flex flex-row">
-			
 					<div class="form-group">
 						<textarea rows="6" formControlName="commentText" cols="50" type="text" class="form-control" placeholder="Enter Comment"></textarea>
 					</div>
-			
 			</div>
 
 			<div class="d-flex flex-row">

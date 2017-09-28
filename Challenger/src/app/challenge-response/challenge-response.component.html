@@ -1,90 +1,100 @@
-	<div class="panelTheme card d-sm-none m-3" style="min-height: 150px;">
-		<img class="card-img-top" src={{panelChallenge.challengeImgUrl}} style="max-height: 170px; width:auto;">
-		<div class="card-body">
+<div class="panelTheme card d-sm-none m-3" style="min-height: 150px;">
+	<img class="card-img-top" src={{panelChallenge.challengeImgUrl}} style="max-height: 170px; width:auto;">
+	<div class="card-body">
 
-			<div class="card-title font-weight-bold text-center" style="letter-spacing: 0.2em;">
-				{{panelChallenge.challengeHeading}}
-			</div>
+		<div class="card-title font-weight-bold text-center" style="letter-spacing: 0.2em;">
+			{{panelChallenge.challengeHeading}}
+		</div>
 
-			<div class="text-center">
-				
-				<div class="d-flex flex-row justify-content-around">
-					<button class="btn btn-dark btn-lg">
+		<div class="text-center">
+
+			<div class="d-flex flex-row justify-content-around">
+				<button class="btn btn-dark btn-lg">
 						<i class="fa fa-thumbs-o-up fa-1x" aria-hidden="true">  {{panelChallenge.challengeUpvote}}  </i>
-					</button>	
+					</button>
 
-					<button class="btn btn-dark btn-lg">
+				<button class="btn btn-dark btn-lg">
 						<i class="fa fa-thumbs-o-down fa-1x" aria-hidden="true">   {{panelChallenge.challengeDownvote}}  </i>
 					</button>
-				</div>
-
 			</div>
-		</div>
-		
-		
 
+		</div>
 	</div>
 
 
 
-	<div class="panelTheme d-none d-sm-block d-md-none m-3" style="min-height: 150px;">
+</div>
 
-		
-		<div class="row">
-			<div class="col-6 align-self-center text-center">
-				<img class="card-img-top" src={{panelChallenge.challengeImgUrl}} style="height: inherit; width:inherit; max-height: 150px; max-width: 150px; border-radius: 5px;">
-			</div>
-			<div class="col-6 align-self-center text-center">
-				<div class="d-inline-block card-title font-weight-bold mr-5">{{panelChallenge.challengeHeading}}  </div>
-			</div>
+
+
+<div class="panelTheme d-none d-sm-block d-md-none m-3" style="min-height: 150px;">
+
+
+	<div class="row">
+		<div class="col-6 align-self-center text-center">
+			<img class="card-img-top" src={{panelChallenge.challengeImgUrl}} style="height: inherit; width:inherit; max-height: 150px; max-width: 150px; border-radius: 5px;">
 		</div>
-		
+		<div class="col-6 align-self-center text-center">
+			<div class="d-inline-block card-title font-weight-bold mr-5">{{panelChallenge.challengeHeading}} </div>
+		</div>
+	</div>
 
-		
-		<div class="card-body">
-			<div class="d-flex flex-row">
 
-			</div>
 
-			<p class="card-text text-justify">{{panelChallenge.challengeText}}</p>
+	<div class="card-body">
+		<div class="d-flex flex-row">
 
-			<div class="text-center">
-				
-				<div class="d-flex flex-row justify-content-around">
-					<button class="btn btn-dark btn-lg">
+		</div>
+
+		<p class="card-text text-justify">{{panelChallenge.challengeText}}</p>
+
+		<div class="text-center">
+
+			<div class="d-flex flex-row justify-content-around">
+				<button class="btn btn-dark btn-lg">
 						<i class="fa fa-thumbs-o-up fa-1x" aria-hidden="true">	&nbsp;{{panelChallenge.challengeUpvote}}  </i>
-					</button>	
-
-					<button class="btn btn-dark btn-lg">
-						<i class="fa fa-thumbs-o-down fa-1x" aria-hidden="true">	&nbsp;{{panelChallenge.challengeDownvote}}  </i>
 					</button>
+
+				<button class="btn btn-dark btn-lg">
+						<i class="fa fa-thumbs-o-down fa-1x" aria-hidden="true">	&nbsp;{{panelChallenge.challengeDownvote}}  </i>
+				</button>
+				<div class="btn-group">
+					<button class="btn btn-dark">Report</button>
+					<button class="btn btn-dark">PM User</button>
+
 				</div>
 			</div>
-		</div>	
-		
+		</div>
 	</div>
+
+</div>
 
 
 <div class="panelTheme card d-none d-md-block m-3" style="min-height: 150px;" mouseoverHighlight>
-	
+
 	<div class="d-flex flex-row justify-content-between">
 		<img class="card-img-left" src={{panelChallenge.challengeImgUrl}} style="height: 180px; max-height: 195px; max-width: 150px; border-radius: 5px;">
 
 		<div class="card-body">
 			<div class=" card-title font-weight-bold">{{panelChallenge.challengeHeading}}</div>
-			<p  class="card-text text-justify pb-3" style="height:104px; overflow: hidden; text-overflow: ellipsis;">{{panelChallenge.challengeText}}</p>
-		</div>	
+			<p class="card-text text-justify pb-3" style="height:104px; overflow: hidden; text-overflow: ellipsis;">{{panelChallenge.challengeText}}</p>
+		</div>
 
 		<div class="d-flex flex-column justify-content-around pr-3">
 			<button class="btn btn-dark btn-lg" (click)="upvote()">
 				<i class="fa fa-thumbs-o-up fa-1x" aria-hidden="true">	&nbsp;{{panelChallenge.challengeUpvote}}  </i>
-			</button>	
+			</button>
 
 			<button class="btn btn-dark btn-lg" (click)="downvote()">
 				<i class="fa fa-thumbs-o-down fa-1x" aria-hidden="true">	&nbsp;{{panelChallenge.challengeDownvote}}  </i>
 			</button>
-		</div>
-		
 
+			<div class="btn-group">
+				<button class="btn btn-dark">Report</button>
+				<button class="btn btn-dark">PM User</button>
+			</div>
+
+		</div>
 	</div>
+
 </div>

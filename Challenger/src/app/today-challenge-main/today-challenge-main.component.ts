@@ -5,7 +5,7 @@ import { comment } from '../models/comment.model';
 import { commentListing } from '../models/comment-listing.model';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
-import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms'
+import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 
 @Component({
 	selector: 'app-today-challenge-main',
@@ -27,10 +27,10 @@ export class TodayChallengeMainComponent implements OnInit {
 		this.chlnglst.fillList().then(() => {
 			this.todaysChallenge = this.chlnglst.getFromListByID('C1')[0];
 			this.cmtLst.FindCommentbyParentID(this.todaysChallenge.getchallengeID());
-
 			this.formloaded = true;
 		});
 
+		this.cmtLst.RefreshCommentList();
 		this.cmtLst.commentService.subscribe((data) => {
 			this.attachedCommentTree = data;
 		});
@@ -52,6 +52,10 @@ export class TodayChallengeMainComponent implements OnInit {
 	onCommentSubmit() {
 		console.log(this.newCommentForm);
 		this.modalRef.hide();
+	}
+
+	loadsamplecomments() {
+		this.cmtLst.PopulateSampleComments();
 	}
 
 

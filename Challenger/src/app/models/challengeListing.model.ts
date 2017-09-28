@@ -125,7 +125,7 @@ export class challengeListing {
 		return challengesender;
 	}
 
-	insertChallenge(challenge, callback, callback2) {
+	insertChallenge(challenge, callback) {
 		// calls pushIndividual function which returns a promise.
 		// once the promise is resolved, then subscribe to it (because it's a HTTP patch function)
 		this.fbComm.pushIndividual(challenge, 'challengetbl').then((data) => {
@@ -133,8 +133,6 @@ export class challengeListing {
 			data.subscribe((res) => {
 				this.getList();
 				callback();
-				callback2();
-
 			});
 		});
 

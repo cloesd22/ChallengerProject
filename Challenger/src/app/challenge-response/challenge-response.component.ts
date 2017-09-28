@@ -13,7 +13,7 @@ export class ChallengeResponseComponent implements OnInit {
 	@Input('channelInput') panelChallenge:challenge;
   panelid:string;
 	
-
+  replyOpen = false;
 
   constructor() { }
 
@@ -33,6 +33,13 @@ export class ChallengeResponseComponent implements OnInit {
   	console.log("downvote");
   }
 
+  openReply(){
+    this.replyOpen = !this.replyOpen;
+  }
+
+  closeReply() {
+		this.replyOpen = false;
+	}
 
 
 }

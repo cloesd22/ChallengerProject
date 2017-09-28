@@ -109,7 +109,7 @@ export class TommorowChallengeMainComponent implements OnInit {
 		var challengeID = "CX";
 		let userID = "UX";
 		let date = Date.now();
-		let imgurl = 'https://unsplash.it/200/300/?random';
+		let imgurl = 'https://lorempixel.com/400/200/cats/';
 
 		this.chlnglst.getLatestChallengeID().then((result) => {
 			challengeID = result;
@@ -118,20 +118,21 @@ export class TommorowChallengeMainComponent implements OnInit {
 
 		const newChallenge = new challenge
 			(
-			{
-				id: challengeID,
-				uid: userID,
-				heading: this.newChallengeForm.value.title,
-				text: this.newChallengeForm.value.challengeText,
-				date: date,
-				imgurl: imgurl
-			}
+				{
+					id: challengeID,
+					uid: userID,
+					heading: this.newChallengeForm.value.title,
+					text: this.newChallengeForm.value.challengeText,
+					date: date,
+					imgurl: imgurl
+				}
 			);
 
-		this.chlnglst.insertChallenge(newChallenge,
-			() => { this.modalRef.hide(); },
-			() => { this.challengeListing.push(newChallenge); }
-		);
+		this.chlnglst.insertChallenge(newChallenge, () => {
+			this.modalRef.hide();
+			this.challengeListing.push(newChallenge);
+		});
+
 	}
 
 	loadsamplechallenges() {

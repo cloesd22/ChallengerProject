@@ -1,3 +1,4 @@
+import { sample } from 'rxjs/operator/sample';
 import { comment } from './comment.model';
 import { EventEmitter, Injectable } from '@angular/core';
 import { FirebaseCommService } from '../services/httpComm/firebase-comm.service';
@@ -6,11 +7,11 @@ import { FirebaseCommService } from '../services/httpComm/firebase-comm.service'
 export class commentListing {
 	// test class simulating a database providing data until firebase setup
 
-	testcomment1 = { 'idValue': 'D1', 'textValue': 'This could be the best idea in history, Just WoW. This is fantastic ', 'parentID': 'C1', 'upvotes': 21, 'downvotes': 4, 'reports': 2 };
-	testcomment2 = { 'idValue': 'D2', 'textValue': 'Yeah no, i don\'t think that\'s a good idea', 'parentID': 'C1', 'upvotes': 323, 'downvotes': 4, 'reports': 2 };
-	testcomment3 = { 'idValue': 'D3', 'textValue': 'But sometimes it could be, like in some other place', 'parentID': 'C1', 'upvotes': 2, 'downvotes': 4, 'reports': 2 };
-	testcomment4 = { 'idValue': 'D4', 'textValue': 'Yeah okay that might work', 'parentID': 'C1', 'upvotes': 3, 'downvotes': 8, 'reports': 2 };
-	testcomment5 = { 'idValue': 'D5', 'textValue': 'I disagree this is nuts', 'parentID': 'C1', 'upvotes': 24, 'downvotes': 6, 'reports': 2 };
+	testcomment1 = new comment({ 'commentID': 'D1', 'characterText': 'This could be the best idea in history, Just WoW. This is fantastic ', 'commentParent': 'C1', 'commentUpvotes': 21, 'commentDownvotes': 4, 'reports': 2 });
+	testcomment2 = new comment({ 'commentID': 'D2', 'characterText': 'Yeah no, i don\'t think that\'s a good idea', 'commentParent': 'C1', 'commentUpvotes': 323, 'commentDownvotes': 4, 'reports': 2 });
+	testcomment3 = new comment({ 'commentID': 'D3', 'characterText': 'But sometimes it could be, like in some other place', 'commentParent': 'C1', 'commentUpvotes': 2, 'commentDownvotes': 4, 'reports': 2 });
+	testcomment4 = new comment({ 'commentID': 'D4', 'characterText': 'Yeah okay that might work', 'commentParent': 'C1', 'commentUpvotes': 3, 'commentDownvotes': 8, 'reports': 2 });
+	testcomment5 = new comment({ 'commentID': 'D5', 'characterText': 'I disagree this is nuts', 'commentParent': 'C1', 'commentUpvotes': 24, 'commentDownvotes': 6, 'reports': 2 });
 
 
 	commentList: comment[] = [new comment(this.testcomment1),
@@ -22,7 +23,6 @@ export class commentListing {
 
 	commentService = new EventEmitter<comment[]>();
 	// to be moved to seperate comment service and expanded.
-
 	constructor(private fbComm: FirebaseCommService) {
 
 	}
@@ -34,7 +34,6 @@ export class commentListing {
 		});
 
 		this.commentService.emit(comment);
-
 	}
 
 	FindCommentbyParentID(id) {
@@ -46,32 +45,67 @@ export class commentListing {
 		this.commentService.emit(comment);
 	}
 
-	RefreshCommentList() {
-		// Loads the latest X comments into local comment listing storage
+	RefreshCommentList = () => {
+		// refreshes the current challenge list.
+		this.commentList = [];
+		return new Promise((resolve, reject) => {
+			this.fbComm.getdata('commenttbl').subscribe((data) => {
+				const resp = data.json();
+				resp.map((element) => {
+					this.commentList.push(new comment({
+						'commentID': "CX",
+						'characterText': element.characterText,
+						'commentParent': element.commentParent,
+						'commentUpvotes': 0,
+						'commentDownvotes': 0,
+						'reports': 0
+					}));
+				});
+				this.distributeLatestComment();
+				resolve();
+			});
+		});
 	}
+
+	distributeLatestComment() {
+		// uses the commentservice to distribute copy of comment list to template.
+		this.commentService.emit(this.commentList);
+	}
+
+
 
 	PopulateSampleComments() {
 		// Testing function to load sample comments into server.
 		// GET the comment array listed here to populate the sampleList array and send it to the database.
+		const testcomment1 = new comment({ 'commentID': 'D1', 'characterText': 'This could be the best idea in history, Just WoW. This is fantastic ', 'commentParent': 'C1', 'commentUpvotes': 21, 'commentDownvotes': 4, 'reports': 2 });
+		const testcomment2 = new comment({ 'commentID': 'D2', 'characterText': 'Yeah no, i don\'t think that\'s a good idea', 'commentParent': 'C1', 'commentUpvotes': 323, 'commentDownvotes': 4, 'reports': 2 });
+		const testcomment3 = new comment({ 'commentID': 'D3', 'characterText': 'But sometimes it could be, like in some other place', 'commentParent': 'C1', 'commentUpvotes': 2, 'commentDownvotes': 4, 'reports': 2 });
+		const testcomment4 = new comment({ 'commentID': 'D4', 'characterText': 'Yeah okay that might work', 'commentParent': 'C1', 'commentUpvotes': 3, 'commentDownvotes': 8, 'reports': 2 });
+		const testcomment5 = new comment({ 'commentID': 'D5', 'characterText': 'I disagree this is nuts', 'commentParent': 'C1', 'commentUpvotes': 24, 'commentDownvotes': 6, 'reports': 2 });
+		const SampleCommentList: comment[] = [];
+		SampleCommentList.push(testcomment1);
+		SampleCommentList.push(testcomment2);
+		SampleCommentList.push(testcomment3);
+		SampleCommentList.push(testcomment4);
+		SampleCommentList.push(testcomment5);
 
-		/* 			const testcomment1 = {'idValue': 'D1', 'textValue': 'This could be the best idea in history, Just WoW. This is fantastic ' , 'parentID': 'C1', 'upvotes': 21, 'downvotes': 4, 'reports': 2};
-					const testcomment2 = {'idValue': 'D2', 'textValue': 'Yeah no, i don\'t think that\'s a good idea' , 'parentID': 'C1', 'upvotes': 323, 'downvotes': 4, 'reports': 2};
-					const testcomment3 = {'idValue': 'D3', 'textValue': 'But sometimes it could be, like in some other place' , 'parentID': 'C1', 'upvotes': 2, 'downvotes': 4, 'reports': 2};
-					const testcomment4 = {'idValue': 'D4', 'textValue': 'Yeah okay that might work' , 'parentID': 'C1', 'upvotes': 3, 'downvotes': 8, 'reports': 2};
-					const testcomment5 = {'idValue': 'D5', 'textValue': 'I disagree this is nuts' , 'parentID': 'C1', 'upvotes': 24, 'downvotes': 6, 'reports': 2};
-					const SampleCommentList: comment[] =  [] ;
-					SampleCommentList.push(testcomment1);
-
-
-					this.fbComm.pushMass(); */
-
-
-
+		console.log(SampleCommentList);
+		this.fbComm.pushMass(SampleCommentList, 'commenttbl').subscribe((data) => {
+			console.log('inserted: ' + data);
+		}, (error) => {
+			console.log('Unable to pushMass sample comments - ' + error);
+		});
 	}
 
-
-
-
+	insertComment(comment, callback) {
+		// calls pushIndividual function which returns a promise.
+		// once the promise is resolved, then subscribe to it (because it's a HTTP patch function)
+		this.fbComm.pushIndividual(comment, 'commenttbl').then((data) => {
+			data.subscribe((res) => {
+				callback();
+			});
+		});
+	}
 }
 
 

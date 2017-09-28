@@ -5,10 +5,10 @@
 }
 
 .dark-overlay{
-	background-color:rgba(0,0,0,0.4);
+	background-color:rgba(0,0,0,0.01);
 	top:0;
 	left:0;
 	width:100%;
 	padding: 50px;
-	min-height:110%;
+	min-height:100%;
 }
