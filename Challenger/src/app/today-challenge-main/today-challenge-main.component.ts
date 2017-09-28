@@ -50,8 +50,26 @@ export class TodayChallengeMainComponent implements OnInit {
 	}
 
 	onCommentSubmit() {
-		console.log(this.newCommentForm);
-		this.modalRef.hide();
+
+		//Produces a comment object out of the reply text
+		//sends the object to the database
+		//referesh/restores the UI.
+
+		var newComment = new comment({'commentID':"CX",
+		'characterText':this.newCommentForm.value.commentText,
+		'commentParent':this.todaysChallenge.challengeID,
+		'commentUpvotes':0,
+		'commentDownvotes':0,
+		'reports':0});
+
+		this.cmtLst.insertComment(newComment,() => {
+			this.cmtLst.RefreshCommentList();
+			this.modalRef.hide();
+		});
+
+
+
+
 	}
 
 	loadsamplecomments() {
